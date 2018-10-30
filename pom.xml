@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.decision_deck.jmcda</groupId>
+		<artifactId>jmcda</artifactId>
+		<version>0.5.3</version>
+	</parent>
+	<artifactId>jmcda-base</artifactId>
+	<name>J-MCDA Base module</name>
+	<description>The base classes of the J-MCDA project. Contains the main structure classes that define MCDA concepts such as alternatives and performance matrixes.</description>
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jmcda-utils</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<!-- NB: Super CSV seems much better, but there is no Maven version. -->
+			<groupId>net.sourceforge.javacsv</groupId>
+			<artifactId>javacsv</artifactId>
+			<version>2.0</version>
+		</dependency>
+	</dependencies>
+</project>
