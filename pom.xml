@@ -6,7 +6,7 @@
 		<artifactId>pom</artifactId>
 		<version>0.6.0</version>
 	</parent>
-	<version>0.5.4-SNAPSHOT</version>
+	<version>0.5.4</version>
 	<artifactId>base</artifactId>
 	<name>J-MCDA Base module</name>
 	<description>The base classes of the J-MCDA project. Contains the main structure classes that define MCDA concepts such as alternatives and performance matrixes.</description>
