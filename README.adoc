@@ -1,8 +1,11 @@
 = J-MCDA base
+:groupId: io.github.oliviercailloux.jmcda
+:artifactId: base
+:repository: jmcda-base
 
-image:https://travis-ci.com/oliviercailloux/jmcda-base.svg?branch=master["Build Status", link="https://travis-ci.com/oliviercailloux/jmcda-base"]
-image:https://maven-badges.herokuapp.com/maven-central/io.github.oliviercailloux/jmcda-base/badge.svg["Artifact on Maven Central", link="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.github.oliviercailloux.jmcda%22%20a%3A%22base%22"]
-image:http://www.javadoc.io/badge/io.github.oliviercailloux/jmcda-base.svg["Javadocs", link="http://www.javadoc.io/doc/io.github.oliviercailloux.jmcda/base"]
+image:https://travis-ci.com/oliviercailloux/{repository}.svg?branch=master["Build Status", link="https://travis-ci.com/oliviercailloux/{repository}"]
+image:https://maven-badges.herokuapp.com/maven-central/{groupId}/{artifactId}/badge.svg["Artifact on Maven Central", link="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22{groupId}%22%20a%3A%22{artifactId}%22"]
+image:http://www.javadoc.io/badge/{groupId}/{artifactId}.svg["Javadocs", link="http://www.javadoc.io/doc/{groupId}/{artifactId}"]
 
 API is _not_ stable. Comments and bug reports are welcome.
 
