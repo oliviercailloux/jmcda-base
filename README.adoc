@@ -6,3 +6,11 @@ image:http://www.javadoc.io/badge/io.github.oliviercailloux/jmcda-base.svg["Java
 
 API is _not_ stable. Comments and bug reports are welcome.
 
+Consider Apache Crunch (and others)?
+https://crunch.apache.org/
+https://flink.apache.org/usecases.html#pipelines
+https://oodt.apache.org/
+https://github.com/WorkerFramework/worker-framework
+https://nodered.org/
+
+See: https://github.com/search?q=owner%3Aoliviercailloux+jmcda&type=repositories[JMCDA repositories]

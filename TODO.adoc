@@ -1,0 +1,9 @@
+= TODO
+
+- Documenter les liens entre les jmcda-*
+- Documenter sommairement ce que fait chaque partie, comment elle fonctionne vu de haut
+- Documenter le problème avec jmcda-xmcda2 et investiguer comment le résoudre
+- Documenter en détail des parties du code
+- Améliorer des parties du code existant : simplifier, clarifier
+- Ajouter des tests là où c’est pertinent et non trivial
+- Proposer des extensions de fonctionnalités
