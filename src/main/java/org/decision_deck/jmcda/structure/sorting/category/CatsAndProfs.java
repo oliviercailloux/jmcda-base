@@ -26,6 +26,7 @@ import org.decision_deck.utils.IObserver;
  * <p>
  * To avoid the possible complexity involved with making sure that objects are inserted in the right place, some simple
  * usage patterns may be followed.
+ * </p>
  * <ul>
  * <li>Simple ways to populate this object are the following.
  * <ul>
@@ -43,7 +44,7 @@ import org.decision_deck.utils.IObserver;
  * <li>Read the list of profiles through the profiles view. This permits to ensure that each profile is read exactly
  * once.</li>
  * </ul>
- * </ul>Note that if this object is not complete (see below), there is no guarantee that the categories have associated
+ * </ul><p>Note that if this object is not complete (see below), there is no guarantee that the categories have associated
  * profiles.
  * </p>
  * <p>
@@ -82,7 +83,7 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * is not complete, none of these guarantees hold.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public NavigableSet<Category> getCategories();
 
@@ -91,7 +92,7 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * categories and profiles from the given source, the source must not contain duplicates categories or profiles.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public void addAll(Iterable<CatOrProf> source);
 
@@ -103,7 +104,7 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * p1 in the result given by this method (the difference being that the worst category is reached last when using
      * this method).
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public NavigableSet<Category> getCategoriesFromBest();
 
@@ -111,8 +112,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Retrieves the up profile corresponding to the category whose name is given, if it exists.
      * 
      * @param categoryName
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the category name corresponds to no category in this object, or the given category
+     *            not {@code null}.
+     * @return {@code null} iff the category name corresponds to no category in this object, or the given category
      *         has no up profile.
      */
     public Alternative getProfileUp(String categoryName);
@@ -121,8 +122,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Retrieves the down profile corresponding to the category whose name is given, if it exists.
      * 
      * @param categoryName
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the category name corresponds to no category in this object, or the given category
+     *            not {@code null}.
+     * @return {@code null} iff the category name corresponds to no category in this object, or the given category
      *         has no down profile.
      */
     public Alternative getProfileDown(String categoryName);
@@ -131,8 +132,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Retrieves the category corresponding to the given name, if it exists. Its profiles are set.
      * 
      * @param categoryName
-     *            not <code>null</code>.
-     * @return a category, or <code>null</code> if no such category were found.
+     *            not {@code null}.
+     * @return a category, or {@code null} if no such category were found.
      */
     public Category getCategory(String categoryName);
 
@@ -140,8 +141,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Retrieves the category having the given profile as up profile, if it exists.
      * 
      * @param profile
-     *            not <code>null</code>.
-     * @return <code>null</code> if the given profile is not in this object, or has no bound down category (which does
+     *            not {@code null}.
+     * @return {@code null} if the given profile is not in this object, or has no bound down category (which does
      *         not imply that it is not assigned yet as it may have an up category).
      */
     public Category getCategoryDown(Alternative profile);
@@ -150,14 +151,14 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Retrieves the category having the given profile as down profile, if it exists.
      * 
      * @param profile
-     *            not <code>null</code>.
-     * @return the category, or <code>null</code> iff the profile is not contained in this object or has no immediate
+     *            not {@code null}.
+     * @return the category, or {@code null} iff the profile is not contained in this object or has no immediate
      *         upper category.
      */
     public Category getCategoryUp(Alternative profile);
 
     /**
-     * @return <code>true</code> iff this object is complete as defined in {@link CatsAndProfs}.
+     * @return {@code true} iff this object is complete as defined in {@link CatsAndProfs}.
      */
     public boolean isComplete();
 
@@ -166,9 +167,9 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * and new profiles apply.
      * 
      * @param oldName
-     *            not <code>null</code>, must exist in this object. The name of the category to replace.
+     *            not {@code null}, must exist in this object. The name of the category to replace.
      * @param newCategory
-     *            not <code>null</code>, must not exist in this object.
+     *            not {@code null}, must not exist in this object.
      */
     public void setCategory(String oldName, Category newCategory);
 
@@ -179,7 +180,7 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * profile. If there is no category in this object yet, only the up profile of the new category is possibly set.
      * 
      * @param name
-     *            not <code>null</code>, must not be the name of some already existing category in this object.
+     *            not {@code null}, must not be the name of some already existing category in this object.
      * @return the category that has just been added, with possible supplementary profiles set.
      */
     public Category addCategory(String name);
@@ -194,7 +195,7 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * are replaced when using this method.
      * 
      * @param profile
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public void addProfile(Alternative profile);
 
@@ -203,10 +204,10 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * replaces the down profile of the next category, if it exists).
      * 
      * @param categoryName
-     *            not <code>null</code>, must exist in this object.
+     *            not {@code null}, must exist in this object.
      * @param profile
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            not {@code null}.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setProfileUp(String categoryName, Alternative profile);
 
@@ -214,8 +215,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * Removes the given profile from this object, if it exists.
      * 
      * @param profile
-     *            not <code>null</code>, the profile to remove.
-     * @return <code>true</code> iff the call changed the state of this object, thus iff the profile has been removed,
+     *            not {@code null}, the profile to remove.
+     * @return {@code true} iff the call changed the state of this object, thus iff the profile has been removed,
      *         thus iff it existed.
      */
     public boolean removeProfile(Alternative profile);
@@ -225,8 +226,8 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * <em>not</em> removed from this object.
      * 
      * @param id
-     *            not <code>null</code>, the id of the category to remove.
-     * @return <code>true</code> iff the call changed the state of this object, thus iff the category has been removed,
+     *            not {@code null}, the id of the category to remove.
+     * @return {@code true} iff the call changed the state of this object, thus iff the category has been removed,
      *         thus iff it existed.
      */
     public boolean removeCategory(String id);
@@ -238,10 +239,10 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * previous category, if it exists).
      * 
      * @param categoryName
-     *            not <code>null</code>, must exist in this object.
+     *            not {@code null}, must exist in this object.
      * @param profile
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            not {@code null}.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setProfileDown(String categoryName, Alternative profile);
 
@@ -253,9 +254,9 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * profile <em>and</em> the profile itself, by assigning a different down profile to the given category.
      * 
      * @param profile
-     *            not <code>null</code>, must exist in this object.
+     *            not {@code null}, must exist in this object.
      * @param newCategory
-     *            not <code>null</code>, must not exist in this object.
+     *            not {@code null}, must not exist in this object.
      */
     public void setCategoryUp(Alternative profile, Category newCategory);
 
@@ -267,16 +268,16 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * <em>and</em> the profile itself, by assigning a different up profile to the given category.
      * 
      * @param profile
-     *            not <code>null</code>, must exist in this object.
+     *            not {@code null}, must exist in this object.
      * @param newCategory
-     *            not <code>null</code>, must not exist in this object.
+     *            not {@code null}, must not exist in this object.
      */
     public void setCategoryDown(Alternative profile, Category newCategory);
 
     /**
      * Retrieves an unmodifiable view of the profiles currently set from worst to best.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public NavigableSet<Alternative> getProfiles();
 
@@ -293,14 +294,14 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
      * to the new category's up profile.
      * 
      * @param category
-     *            not <code>null</code>. If its down or up profile is set, they will be set as well in this object.
+     *            not {@code null}. If its down or up profile is set, they will be set as well in this object.
      * @return the category that has just been set. This is the given category, possibly enriched with a down and up
      *         profiles as these could have been previously set in this object.
      */
     public Category addCategory(Category category);
 
     /**
-     * @return <code>true</code> iff this object contains no categories and no profiles.
+     * @return {@code true} iff this object contains no categories and no profiles.
      */
     public boolean isEmpty();
 
@@ -309,11 +310,11 @@ public interface CatsAndProfs extends Iterable<CatOrProf> {
     /**
      * Observes the addition of profiles. The given observer is called with {@link IObserver#update} when a profile is
      * added, the object being the added profile. For optimisation reasons, this object may choose to call the update
-     * method with a <code>null</code> argument when several profiles have been added at the same time (or sometimes
+     * method with a {@code null} argument when several profiles have been added at the same time (or sometimes
      * even when only one profile has been added). Therefore, the argument should be used only for optimization.
      * 
      * @param observer
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public void addObserverAddedProfile(IObserver<Alternative> observer);
 

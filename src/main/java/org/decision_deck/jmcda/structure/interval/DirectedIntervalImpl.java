@@ -45,19 +45,19 @@ public class DirectedIntervalImpl implements Interval {
      */
     private final double m_maximum;
     /**
-     * <code>null</code> or greater than zero.
+     * {@code null} or greater than zero.
      */
     private final Double m_stepSize;
 
     /**
      * @param preferenceDirection
-     *            <code>null</code> for not set.
+     *            {@code null} for not set.
      * @param minimum
      *            {@link Double#NEGATIVE_INFINITY} for not set.
      * @param maximum
      *            {@link Double#POSITIVE_INFINITY} for not set.
      * @param stepSize
-     *            <code>null</code> for not set, or must be greater than zero, in which case minimum must be set.
+     *            {@code null} for not set, or must be greater than zero, in which case minimum must be set.
      */
     public DirectedIntervalImpl(PreferenceDirection preferenceDirection, double minimum, double maximum, Double stepSize) {
 	m_preferenceDirection = preferenceDirection;
@@ -77,7 +77,7 @@ public class DirectedIntervalImpl implements Interval {
      * Creates a new real interval, with no minimum or maximum bounds, representing the given preference direction.
      * 
      * @param direction
-     *            <code>null</code> for not set.
+     *            {@code null} for not set.
      * @return a new interval.
      */
     static DirectedIntervalImpl newDirection(PreferenceDirection direction) {
@@ -97,7 +97,7 @@ public class DirectedIntervalImpl implements Interval {
 
     /**
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, not infinite.
      * @param maximum
@@ -121,7 +121,7 @@ public class DirectedIntervalImpl implements Interval {
      * Creates an interval with possibly infinite lower and upper bounds.
      * 
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, or negative infinity.
      * @param maximum
@@ -177,14 +177,14 @@ public class DirectedIntervalImpl implements Interval {
      * Retrieves this object with a new facade permitting easier use when this interval only contains integers, i.e.,
      * when the worst, best, and increment values all are integers.
      * 
-     * @return <code>null</code> iff this object can't be converted to an integer interval.
+     * @return {@code null} iff this object can't be converted to an integer interval.
      */
     OrderedIntervalInteger getAsIntegerInterval() {
 	return new OrderedIntervalInteger(this);
     }
 
     /**
-     * May be <code>null</code>.
+     * May be {@code null}.
      */
     private final PreferenceDirection m_preferenceDirection;
     private static final Character REALS = Character.valueOf('\u211D');
@@ -207,7 +207,7 @@ public class DirectedIntervalImpl implements Interval {
 
     /**
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, not infinite.
      * @param maximum

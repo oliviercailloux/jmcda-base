@@ -112,10 +112,10 @@ public class SharedThresholds extends AbstractSharedDecisionMakerPreferences<Thr
 
     /**
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call changed the state of the target object.
+     *            not {@code null}.
+     * @return {@code true} iff the call changed the state of the target object.
      */
     private boolean merge(Thresholds source, final Thresholds target) {
 	if (source == null || target == null) {

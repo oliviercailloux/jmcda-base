@@ -103,7 +103,7 @@ public class DataGenerator {
      * contain the preference direction. The interval may be discrete or continuous.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      * @throws InvalidInputException
      *             if an infinite interval is found, or a preference direction is missing.
      */
@@ -233,7 +233,7 @@ public class DataGenerator {
      * 
      * @param nbCategories
      *            the number of categories to generate.
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public CatsAndProfs genCatsAndProfs(int nbCategories) {
 	checkArgument(nbCategories >= 1);
@@ -247,7 +247,7 @@ public class DataGenerator {
      * Reuses the profiles stored in this object. Generates a number of categories equal to the number of profiles + 1.
      * If no profiles are stored in this object, the returned object contains one category and no profiles.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public CatsAndProfs genCatsAndProfsUsingProfiles() {
 	final CatsAndProfs cats = Categories.newCatsAndProfs();
@@ -324,8 +324,8 @@ public class DataGenerator {
      * Associates the given scale to each criterion stored in this object.
      * 
      * @param scale
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public Map<Criterion, Interval> setScales(Interval scale) {
 	final Map<Criterion, Interval> scales = Maps.newLinkedHashMap();
@@ -343,11 +343,11 @@ public class DataGenerator {
      * </p>
      * 
      * @param profiles
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param scales
-     *            not <code>null</code>.
+     *            not {@code null}.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      * @throws InvalidInputException
      *             if an infinite interval is found, or a preference direction is missing.
      */

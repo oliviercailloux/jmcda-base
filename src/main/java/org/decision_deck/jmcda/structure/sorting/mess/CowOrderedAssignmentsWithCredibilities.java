@@ -15,7 +15,7 @@ import org.decisiondeck.jmcda.structure.sorting.assignment.utils.AssignmentsUtil
 
 public class CowOrderedAssignmentsWithCredibilities implements IOrderedAssignmentsWithCredibilities {
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private VersatileOrderedAssignments m_delegate;
 

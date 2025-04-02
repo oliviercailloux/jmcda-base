@@ -16,7 +16,7 @@ public class SortingResultsToMultipleComplete extends SortingResultsToMultipleFo
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingResultsToMultipleComplete(ISortingResultsToMultiple delegate) {
 	super(delegate);

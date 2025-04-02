@@ -66,7 +66,7 @@ public class CatsAndProfsForwarder implements CatsAndProfs {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public CatsAndProfsForwarder(CatsAndProfs delegate) {
 	if (delegate == null) {

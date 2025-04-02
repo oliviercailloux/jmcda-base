@@ -23,7 +23,7 @@ public class SortingResultsToMultipleViewGroupBacked extends SortingPreferencesV
     /**
      * Retrieves the decision maker whose related informations this objects reads in the delegated group sorting object.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public DecisionMaker getViewedDm() {
@@ -38,9 +38,9 @@ public class SortingResultsToMultipleViewGroupBacked extends SortingPreferencesV
      * {@link SortingProblemUtils} might be preferred.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param dm
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingResultsToMultipleViewGroupBacked(IGroupSortingResultsToMultiple delegate,
 	    DecisionMaker dm) {

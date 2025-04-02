@@ -29,7 +29,7 @@ public class OrderedAssignmentsWithCredibilities implements IOrderedAssignmentsW
      * Copy-constructor by value. No reference is kept to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsWithCredibilities(IOrderedAssignmentsWithCredibilitiesRead source) {
 	this(new VersatileOrderedAssignments(source));

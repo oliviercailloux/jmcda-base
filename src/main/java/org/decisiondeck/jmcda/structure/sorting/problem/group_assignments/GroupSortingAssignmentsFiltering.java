@@ -23,7 +23,7 @@ public class GroupSortingAssignmentsFiltering extends GroupSortingDataForwarder 
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingAssignmentsFiltering(IGroupSortingAssignments delegate) {
 	this(delegate, Predicates.<Alternative> alwaysTrue());
@@ -35,9 +35,9 @@ public class GroupSortingAssignmentsFiltering extends GroupSortingDataForwarder 
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public GroupSortingAssignmentsFiltering(IGroupSortingAssignments delegate, Predicate<Alternative> filterAlternatives) {
 	super(new GroupSortingDataFiltering(delegate, filterAlternatives));
@@ -50,7 +50,7 @@ public class GroupSortingAssignmentsFiltering extends GroupSortingDataForwarder 
     }
 
     /**
-     * @return <code>null</code> for everything allowed.
+     * @return {@code null} for everything allowed.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesFilter();

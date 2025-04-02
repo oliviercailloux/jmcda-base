@@ -84,8 +84,8 @@ public class AssignmentsUtils {
      * the iterable, the change is not reflected.
      * 
      * @param allAssignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Set<Alternative> getUnionAssignedAlternatives(
 	    Iterable<? extends IOrderedAssignmentsToMultipleRead> allAssignments) {
@@ -109,11 +109,11 @@ public class AssignmentsUtils {
      * Overrides the target by replacing every information it contains with the information in the given source.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the contents of the given target, or equivalently,
-     *         <code>false</code> iff the given target was equal to the given source.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the contents of the given target, or equivalently,
+     *         {@code false} iff the given target was equal to the given source.
      */
     static public boolean copyOrderedAssignmentsToMultipleToTarget(IOrderedAssignmentsToMultipleRead source,
 	    IOrderedAssignmentsToMultiple target) {
@@ -174,11 +174,11 @@ public class AssignmentsUtils {
      * old category with the new one in the set of categories bound to the given assignments object.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param oldCategory
-     *            not <code>null</code>, must exist in the set of categories of the given assignments.
+     *            not {@code null}, must exist in the set of categories of the given assignments.
      * @param newCategory
-     *            not <code>null</code>, must not exist in the set of categories of the given assignments.
+     *            not {@code null}, must not exist in the set of categories of the given assignments.
      */
     static public void renameCategory(final IOrderedAssignments assignments, final Category oldCategory,
 	    Category newCategory) {
@@ -205,11 +205,11 @@ public class AssignmentsUtils {
      * categories bound to the given assignments if it exists.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param toRemove
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the state of the given assignments, or
-     *         equivalently, <code>true</code> iff the given category was contained in the given assignments.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the state of the given assignments, or
+     *         equivalently, {@code true} iff the given category was contained in the given assignments.
      */
     static public boolean removeCategory(IOrderedAssignments assignments, Category toRemove) {
 	Preconditions.checkNotNull(assignments);
@@ -281,11 +281,11 @@ public class AssignmentsUtils {
      * categories bound to the given assignments if it exists.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param toRemove
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the state of the given assignments, or
-     *         equivalently, <code>true</code> iff the given category was contained in the given assignments.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the state of the given assignments, or
+     *         equivalently, {@code true} iff the given category was contained in the given assignments.
      */
     static public boolean removeCategory(IOrderedAssignmentsToMultiple assignments, Category toRemove) {
 	Preconditions.checkNotNull(assignments);
@@ -308,11 +308,11 @@ public class AssignmentsUtils {
      * Overrides the target by replacing every information it contains with the information in the given source.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the contents of the given target, or equivalently,
-     *         <code>false</code> iff the given target was equal to the given source.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the contents of the given target, or equivalently,
+     *         {@code false} iff the given target was equal to the given source.
      */
     static public boolean copyOrderedAssignmentsToTarget(IOrderedAssignmentsRead source, IOrderedAssignments target) {
 	Preconditions.checkNotNull(source);
@@ -342,9 +342,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             if the source contains at least one alternative assigned to more than one category.
      */
@@ -421,8 +421,8 @@ public class AssignmentsUtils {
      * method is suitable for use in a {@link #toString()} method.
      * 
      * @param assignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public String getShortDescription(final IAssignmentsRead assignments) {
 	final ToStringHelper helper = Objects.toStringHelper(assignments);
@@ -514,10 +514,10 @@ public class AssignmentsUtils {
      * credibilities of, in order, 2, 0, 4.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alternative
-     *            not <code>null</code>.
-     * @return not <code>null</code>. The set of categories are the same as the set of categories in the given
+     *            not {@code null}.
+     * @return not {@code null}. The set of categories are the same as the set of categories in the given
      *         assignments. All values are positive or zero. The returned map is a copy.
      */
     static public NavigableMap<Category, Double> getCredibilitiesWithZeroes(
@@ -542,10 +542,10 @@ public class AssignmentsUtils {
      * assigned, this method returns the credibilities as would be returned from the assignments object.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alternative
-     *            not <code>null</code>.
-     * @return not <code>null</code>, a possibly read-only copy.
+     *            not {@code null}.
+     * @return not {@code null}, a possibly read-only copy.
      */
     public static NavigableMap<Category, Double> getCredibilitiesOrEmpty(
 	    IOrderedAssignmentsWithCredibilitiesRead assignments, Alternative alternative) {
@@ -587,11 +587,11 @@ public class AssignmentsUtils {
      * categories bound to the given assignments if it exists.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param toRemove
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the state of the given assignments, or
-     *         equivalently, <code>true</code> iff the given category was contained in the given assignments.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the state of the given assignments, or
+     *         equivalently, {@code true} iff the given category was contained in the given assignments.
      */
     static public boolean removeCategory(IOrderedAssignmentsWithCredibilities assignments, Category toRemove) {
 	Preconditions.checkNotNull(assignments);
@@ -630,14 +630,14 @@ public class AssignmentsUtils {
      * the categories.
      * 
      * @param allAssignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param categories
-     *            not <code>null</code>, must be a superset of all categories used in the assignments objects.
+     *            not {@code null}, must be a superset of all categories used in the assignments objects.
      * @param alternatives
-     *            if not <code>null</code>, the set must be included in the set of all alternatives assigned in at least
+     *            if not {@code null}, the set must be included in the set of all alternatives assigned in at least
      *            one of the given assignments. Those alternatives are the ones assigned in the returned union. The
      *            iteration order of the returned union matches that of the given set.
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     static public IOrderedAssignmentsToMultiple getUnion(
 	    Iterable<? extends IOrderedAssignmentsToMultipleRead> allAssignments, NavigableSet<Category> categories,
@@ -694,9 +694,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             if the source contains at least one alternative assigned to more than one category.
      */
@@ -817,9 +817,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public void copyAssignmentsToMultipleToTarget(IAssignmentsToMultipleRead source,
 	    IAssignmentsToMultiple target) {
@@ -847,9 +847,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             iff at least one alternative is assigned in source to a category not contained in the categories
      *             associated to the given target.
@@ -914,9 +914,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             iff at least one alternative is assigned in source to a category not contained in the categories
      *             associated to the given target.
@@ -952,9 +952,9 @@ public class AssignmentsUtils {
      * TODO check why exception may be thrown, consider using getCategories.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             iff at least one alternative is assigned in source to a category not contained in the categories
      *             associated to the given target.
@@ -1063,11 +1063,11 @@ public class AssignmentsUtils {
      * Overrides the target by replacing every information it contains with the information in the given source.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call to this method changed the contents of the given target, or equivalently,
-     *         <code>false</code> iff the given target was equal to the given source.
+     *            not {@code null}.
+     * @return {@code true} iff the call to this method changed the contents of the given target, or equivalently,
+     *         {@code false} iff the given target was equal to the given source.
      */
     static public boolean copyOrderedAssignmentsWithCredibilitiesToTarget(
 	    IOrderedAssignmentsWithCredibilitiesRead source, IOrderedAssignmentsWithCredibilities target) {
@@ -1131,17 +1131,17 @@ public class AssignmentsUtils {
     }
 
     /**
-     * Compares the assignments of the given alternatives, and returns <code>true</code> iff the first alternative is
+     * Compares the assignments of the given alternatives, and returns {@code true} iff the first alternative is
      * strictly better than the second one, thus, if its worst category it is assigned to is better than the best
      * category the second alternative is assigned to.
      * 
      * @param assignments
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alternative1
-     *            not <code>null</code>, must be assigned.
+     *            not {@code null}, must be assigned.
      * @param alternative2
-     *            not <code>null</code>, must be assigned.
-     * @return <code>true</code> iff alternative1 is robustly better than alternative2.
+     *            not {@code null}, must be assigned.
+     * @return {@code true} iff alternative1 is robustly better than alternative2.
      */
     static public boolean isStrictlyBetter(IOrderedAssignmentsToMultipleRead assignments, Alternative alternative1,
 	    Alternative alternative2) {
@@ -1165,8 +1165,8 @@ public class AssignmentsUtils {
      * according to the given assignments.
      * 
      * @param assignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>, may be empty.
+     *            not {@code null}.
+     * @return not {@code null}, may be empty.
      * @see #isStrictlyBetter(IOrderedAssignmentsToMultipleRead, Alternative, Alternative)
      */
     static public Set<Pair<Alternative, Alternative>> getStrictlyPreferredPairs(
@@ -1190,8 +1190,8 @@ public class AssignmentsUtils {
      * method is suitable for use in a {@link #toString()} method.
      * 
      * @param assignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public String getShortDescription(final IAssignmentsWithCredibilitiesRead assignments) {
 	final ToStringHelper helper = Objects.toStringHelper(assignments);
@@ -1228,8 +1228,8 @@ public class AssignmentsUtils {
      * method is suitable for use in a {@link #toString()} method.
      * 
      * @param assignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public String getShortDescription(final IAssignmentsToMultipleRead assignments) {
 	final ToStringHelper helper = Objects.toStringHelper(assignments);
@@ -1270,9 +1270,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @throws InvalidInputException
      *             if the source contains at least one alternative assigned to more than one category.
      */
@@ -1353,9 +1353,9 @@ public class AssignmentsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public void copyAssignmentsToTarget(IAssignmentsRead source, IAssignments target) {
 	Preconditions.checkNotNull(source);

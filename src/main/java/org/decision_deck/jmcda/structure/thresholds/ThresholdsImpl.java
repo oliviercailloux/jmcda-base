@@ -10,15 +10,15 @@ import org.decision_deck.utils.collection.CollectionUtils;
 class ThresholdsImpl extends ThresholdsMapBased implements Thresholds {
 
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private final Map<Criterion, Double> m_indiffs = CollectionUtils.newMapNoNull();
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private final Map<Criterion, Double> m_prefs = CollectionUtils.newMapNoNull();
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private final Map<Criterion, Double> m_vetoes = CollectionUtils.newMapNoNull();
 
@@ -39,11 +39,11 @@ class ThresholdsImpl extends ThresholdsMapBased implements Thresholds {
 
     /**
      * @param prefs
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param indiffs
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param vetoes
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public ThresholdsImpl(Map<Criterion, Double> prefs, Map<Criterion, Double> indiffs, Map<Criterion, Double> vetoes) {
 	super();

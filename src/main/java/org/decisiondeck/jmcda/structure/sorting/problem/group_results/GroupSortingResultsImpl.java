@@ -83,7 +83,7 @@ public class GroupSortingResultsImpl extends GroupSortingPreferencesForwarder im
      * the map is populated.
      * </p>
      * <p>
-     * No <code>null</code> values or keys (but assignments objects may be empty).
+     * No {@code null} values or keys (but assignments objects may be empty).
      * </p>
      * <p>
      * Once an assignment object has been created for a decision maker, it must not be replaced, but its internal state
@@ -108,7 +108,7 @@ public class GroupSortingResultsImpl extends GroupSortingPreferencesForwarder im
      * delegate should <em>not</em> be kept.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingResultsImpl(IGroupSortingPreferences delegate) {
 	super(delegate);
@@ -141,7 +141,7 @@ public class GroupSortingResultsImpl extends GroupSortingPreferencesForwarder im
     /**
      * @param dm
      *            must be in this object.
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     private IOrderedAssignments lazyInitAssignments(DecisionMaker dm) {
 	if (!getDms().contains(dm)) {

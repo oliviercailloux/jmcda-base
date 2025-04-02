@@ -40,7 +40,7 @@ public class SortingDataFiltering extends ProblemDataForwarder implements ISorti
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingDataFiltering(ISortingData delegate) {
 	this(delegate, null, null);
@@ -57,11 +57,11 @@ public class SortingDataFiltering extends ProblemDataForwarder implements ISorti
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      * @param filterCriteria
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public SortingDataFiltering(ISortingData delegate, Predicate<Alternative> filterAlternatives,
 	    Predicate<Criterion> filterCriteria) {
@@ -101,14 +101,14 @@ public class SortingDataFiltering extends ProblemDataForwarder implements ISorti
     }
 
     /**
-     * @return <code>null</code> for allow everything.
+     * @return {@code null} for allow everything.
      */
     public Predicate<Alternative> getAlternativesPredicate() {
 	return delegate().getAlternativesPredicate();
     }
 
     /**
-     * @return <code>null</code> to allow everything.
+     * @return {@code null} to allow everything.
      */
     public Predicate<Criterion> getCriteriaPredicate() {
 	return delegate().getCriteriaPredicate();

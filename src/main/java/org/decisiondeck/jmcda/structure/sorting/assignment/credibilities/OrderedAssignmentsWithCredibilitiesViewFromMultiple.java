@@ -18,7 +18,7 @@ public class OrderedAssignmentsWithCredibilitiesViewFromMultiple implements IOrd
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param credibilityValue
      *            greater than zero. The value to use as credibility.
      */

@@ -27,7 +27,7 @@ import com.google.common.base.Preconditions;
 public class SortingPreferencesViewGroupBacked implements ISortingPreferences {
     private final IGroupSortingPreferences m_delegate;
     /**
-     * <code>null</code> to access the shared informations.
+     * {@code null} to access the shared informations.
      */
     private final DecisionMaker m_dm;
 
@@ -36,7 +36,7 @@ public class SortingPreferencesViewGroupBacked implements ISortingPreferences {
      * maker's preferences.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingPreferencesViewGroupBacked(IGroupSortingPreferences delegate) {
 	if (delegate == null) {
@@ -52,9 +52,9 @@ public class SortingPreferencesViewGroupBacked implements ISortingPreferences {
      * the shared information instead, use the other constructor.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param dm
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingPreferencesViewGroupBacked(IGroupSortingPreferences delegate, DecisionMaker dm) {
 	Preconditions.checkNotNull(delegate);
@@ -179,7 +179,7 @@ public class SortingPreferencesViewGroupBacked implements ISortingPreferences {
     /**
      * Retrieves the decision maker whose related informations this objects reads in the delegated group sorting object.
      * 
-     * @return <code>null</code> iff this objects read the shared informations.
+     * @return {@code null} iff this objects read the shared informations.
      */
     public DecisionMaker getViewedDm() {
 	return m_dm;

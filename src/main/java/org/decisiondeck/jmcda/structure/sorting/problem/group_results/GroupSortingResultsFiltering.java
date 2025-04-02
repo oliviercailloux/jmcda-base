@@ -35,7 +35,7 @@ public class GroupSortingResultsFiltering extends GroupSortingPreferencesForward
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingResultsFiltering(IGroupSortingResults delegate) {
 	this(delegate, Predicates.<Alternative> alwaysTrue());
@@ -47,9 +47,9 @@ public class GroupSortingResultsFiltering extends GroupSortingPreferencesForward
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public GroupSortingResultsFiltering(IGroupSortingResults delegate, Predicate<Alternative> filterAlternatives) {
 	super(new GroupSortingPreferencesFiltering(delegate, filterAlternatives));
@@ -103,7 +103,7 @@ public class GroupSortingResultsFiltering extends GroupSortingPreferencesForward
     }
 
     /**
-     * @return <code>null</code> for everything allowed.
+     * @return {@code null} for everything allowed.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesFilter();

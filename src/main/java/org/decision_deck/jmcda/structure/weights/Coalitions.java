@@ -41,7 +41,7 @@ public interface Coalitions {
      * Retrieves a view of the set of criteria on which weights are defined. Removal from the returned set might be
      * supported in the future.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Criterion> getCriteria();
 
@@ -59,7 +59,7 @@ public interface Coalitions {
      * Retrieves the weight bound to the given criterion. The criterion must be have a weight.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a number greater than or equal to zero.
      * @see #getCriteria()
      */
@@ -69,8 +69,8 @@ public interface Coalitions {
      * Removes the weight bound to the given criterion, if there was such a weight.
      * 
      * @param criterion
-     *            not <code>null</code>.
-     * @return the weight previously associated to that criterion, or <code>null</code> iff this method call had no
+     *            not {@code null}.
+     * @return the weight previously associated to that criterion, or {@code null} iff this method call had no
      *         effect.
      */
     public Double removeWeight(Criterion criterion);
@@ -79,10 +79,10 @@ public interface Coalitions {
      * Sets the weight associated to the given criterion.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param weight
      *            a positive or zero value.
-     * @return the weight that was previously associated to that criterion (positive or zero), or <code>null</code> if
+     * @return the weight that was previously associated to that criterion (positive or zero), or {@code null} if
      *         it was not set.
      */
     public Double putWeight(Criterion criterion, double weight);
@@ -92,21 +92,21 @@ public interface Coalitions {
      * 
      * @param majorityThreshold
      *            a positive or zero value.
-     * @return the previous majority threshold value, or <code>null</code> iff it was not set.
+     * @return the previous majority threshold value, or {@code null} iff it was not set.
      */
     public Double setMajorityThreshold(double majorityThreshold);
 
     /**
      * Removes the possibly associated majority threshold. If not set, this method has no effect.
      * 
-     * @return the previous value of the majority threshold, or <code>null</code> iff it was not set.
+     * @return the previous value of the majority threshold, or {@code null} iff it was not set.
      */
     public Double removeMajorityThreshold();
 
     /**
      * Retrieves a view that reads and writes through to this object.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Weights getWeights();
 
@@ -115,7 +115,7 @@ public interface Coalitions {
     /**
      * Tests whether this object contains no information.
      * 
-     * @return <code>true</code> iff this object contains no weights and no majority threshold.
+     * @return {@code true} iff this object contains no weights and no majority threshold.
      */
     public boolean isEmpty();
 

@@ -49,9 +49,9 @@ public class Categories {
 
     /**
      * @param category
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @return a detailed string representation of the object; the string "null" if the given object is
-     *         <code>null</code>.
+     *         {@code null}.
      */
     static public String toStringDetailed(Category category) {
 	if (category == null) {
@@ -66,7 +66,7 @@ public class Categories {
 
     /**
      * @param categories
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing this set of categories as an interval.
      */
     static public String toIntervalString(NavigableSet<Category> categories) {

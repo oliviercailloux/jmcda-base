@@ -25,8 +25,8 @@ public interface IGroupSortingResults extends IGroupSortingData, IGroupSortingPr
      * </p>
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker does not exist in this object.
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker does not exist in this object.
      */
     public ISortingResults getResults(DecisionMaker dm);
 }

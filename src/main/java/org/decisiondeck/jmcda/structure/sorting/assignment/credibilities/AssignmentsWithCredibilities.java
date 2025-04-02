@@ -26,7 +26,7 @@ public class AssignmentsWithCredibilities implements IAssignmentsWithCredibiliti
      * Copy-constructor by value. No reference is kept to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AssignmentsWithCredibilities(IAssignmentsWithCredibilitiesRead source) {
 	this(new VersatileAssignments(source));

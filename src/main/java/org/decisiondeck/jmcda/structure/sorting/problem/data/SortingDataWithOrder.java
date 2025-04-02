@@ -51,6 +51,7 @@ import com.google.common.collect.Sets;
  * </p>
  * <p>
  * The following order rules may be used for each relevant object type.
+ * </p>
  * <ul>
  * <li>The natural ordering may be used, which will return the objects sorted by alphabetical order of their ids, as
  * defined by the default string comparator.</li>
@@ -81,7 +82,6 @@ import com.google.common.collect.Sets;
  * profiles defined in this object, in which case the whole set of profiles used in this object is ordered by
  * preference. Using such an order amounts to use a complete order, thus no problem occurs when adding a profile.</li>
  * </ul>
- * </p>
  * <p>
  * The evaluations methods (e.g. {@link #getAlternativesEvaluations()}) do not take the order into account, to iterate
  * in order it is necessary to use e.g. {@link #getAlternatives()} rather than {@link EvaluationsRead#getRows()}. Same
@@ -101,7 +101,7 @@ public class SortingDataWithOrder extends SortingDataForwarder implements ISorti
      * The default order uses the natural ordering.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingDataWithOrder(ISortingData delegate) {
 	super(delegate);
@@ -139,7 +139,7 @@ public class SortingDataWithOrder extends SortingDataForwarder implements ISorti
 
     /**
      * A set which duplicates the data found in the delegate sorting data. This set and the data in the delegate are
-     * kept in sync by this object. Is <code>null</code> iff the delegate data order is used.
+     * kept in sync by this object. Is {@code null} iff the delegate data order is used.
      */
     private NavigableSet<Alternative> m_alternativesOrderedSet;
     /**
@@ -149,7 +149,7 @@ public class SortingDataWithOrder extends SortingDataForwarder implements ISorti
     private final ForwardingSetChangeableDelegate<Alternative> m_alternativesView;
     /**
      * A set which duplicates the data found in the delegate sorting data and implementing the required sorting order.
-     * This set and the data in the delegate are kept in sync by this object. Is <code>null</code> iff the delegate data
+     * This set and the data in the delegate are kept in sync by this object. Is {@code null} iff the delegate data
      * order is used.
      */
     private NavigableSet<Alternative> m_profilesOrderedSet;

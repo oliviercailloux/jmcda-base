@@ -16,18 +16,19 @@ import org.decisiondeck.jmcda.structure.sorting.problem.preferences.ISortingPref
  * <p>
  * Setting a preferential parameter for a decision maker (even an empty one such as a {@link Thresholds} containing no
  * thresholds) adds that decision maker to the set of decision makers if it was not already present. Setting a
- * preferential parameter for a decision maker to <code>null</code> removes the associated preference information, but
+ * preferential parameter for a decision maker to {@code null} removes the associated preference information, but
  * does not remove the decision maker (because of the no auto-remove behavior, see {@link IGroupSortingData}).
  * </p>
  * <p>
  * When a preferential parameter has not been set for a given decision maker, but that decision maker is in the set
  * returned by {@link #getDms()} (e.g. because an other preferential parameter has been set for that decision maker),
- * implementing objects may not return <code>null</code>. Obviously an empty object can be returned (e.g., a
+ * implementing objects may not return {@code null}. Obviously an empty object can be returned (e.g., a
  * {@link Thresholds} object containing no thresholds), but other possibilities exist, e.g. an implementing object may
  * choose to provide default values for some parameters.
  * </p>
  * <p>
  * This object is consistent iff all the following holds.
+ * </p>
  * <ul>
  * <li>The data is consistent, i.e.:
  * <ul>
@@ -61,7 +62,6 @@ import org.decisiondeck.jmcda.structure.sorting.problem.preferences.ISortingPref
  * according to the profiles dominance relation, but that would be restrictive as not every sorting method might demand
  * that.</li>
  * </ul>
- * </p>
  * <p>
  * The coalition objects this object returns all have a tolerance (used when computing the sum of the weights when
  * normalizing) that reflect this object's tolerance (see {@link #SUM_OF_WEIGHTS_DEFAULT_TOLERANCE}). When setting this
@@ -91,7 +91,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * (because the new decision maker comes with empty associated informations).
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public Set<DecisionMaker> getDms();
@@ -101,7 +101,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * {@link #getDms()}. The set of criteria over which the coalitions are defined is a subset of the criteria returned
      * by {@link #getCriteria()}.
      * 
-     * @return not <code>null</code>. No <code>null</code> key, no <code>null</code> values.
+     * @return not {@code null}. No {@code null} key, no {@code null} values.
      */
     public Map<DecisionMaker, Coalitions> getCoalitions();
 
@@ -111,8 +111,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * object reads the data (criteria, alternatives etc.) in the order provided by this object.
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker does not exist in this object.
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker does not exist in this object.
      */
     public ISortingPreferences getPreferences(DecisionMaker dm);
 
@@ -123,8 +123,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * </p>
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker is not in the set of decision makers returned by
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker is not in the set of decision makers returned by
      *         {@link #getDms()}.
      */
     public Coalitions getCoalitions(DecisionMaker dm);
@@ -135,10 +135,10 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * those returned by {@link #getCoalitions()}.
      * 
      * @param dm
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param criterion
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker, or criterion, is not in the set of decision makers, or
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker, or criterion, is not in the set of decision makers, or
      *         criteria, returned by {@link #getDms()}, or {@link #getCriteria()}, or if the weight on that criterion
      *         for this decision maker has not been defined. Otherwise, a positive or zero value.
      */
@@ -150,7 +150,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * Retrieves a read-only view of the thresholds. The set of decision makers equals the set returned by
      * {@link #getDms()}.
      * 
-     * @return not <code>null</code>, no <code>null</code> key, no <code>null</code> values.
+     * @return not {@code null}, no {@code null} key, no {@code null} values.
      */
     public Map<DecisionMaker, Thresholds> getThresholds();
 
@@ -158,8 +158,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * Retrieves a read-only view of the thresholds of the given decision maker.
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker is not in the set of decision makers returned by
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker is not in the set of decision makers returned by
      *         {@link #getDms()}.
      */
     public Thresholds getThresholds(DecisionMaker dm);
@@ -169,7 +169,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * provided is a subset of the set returned by {@link #getCriteria()}. The set of decision makers equals the set
      * returned by {@link #getDms()}.
      * 
-     * @return not <code>null</code>, no <code>null</code> key, no <code>null</code> values.
+     * @return not {@code null}, no {@code null} key, no {@code null} values.
      */
     public Map<DecisionMaker, EvaluationsRead> getProfilesEvaluations();
 
@@ -180,8 +180,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * which evaluations are provided is a subset of the set returned by {@link #getCriteria()}.
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker is not in the set of decision makers returned by
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker is not in the set of decision makers returned by
      *         {@link #getDms()}.
      */
     public EvaluationsRead getProfilesEvaluations(DecisionMaker dm);
@@ -200,7 +200,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * decision makers (meaning: same contents, not necessarily the same object).
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public EvaluationsRead getSharedProfilesEvaluations();
 
@@ -215,8 +215,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * considered as being added with empty preferential informations?
      * 
      * @param keepShared
-     *            <code>true</code> to keep the shared informations even when no DMs exist any more and to assign the
-     *            shared informations to any newly added DM. If <code>false</code>, the default behavior, removing the
+     *            {@code true} to keep the shared informations even when no DMs exist any more and to assign the
+     *            shared informations to any newly added DM. If {@code false}, the default behavior, removing the
      *            last DM and adding a DM removes the shared information.
      */
     public void setKeepSharedProfilesEvaluations(boolean keepShared);
@@ -233,8 +233,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * </p>
      * 
      * @param profilesEvaluations
-     *            not <code>null</code>. If empty, every profiles evaluations are removed.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            not {@code null}. If empty, every profiles evaluations are removed.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setSharedProfilesEvaluations(EvaluationsRead profilesEvaluations);
 
@@ -250,11 +250,11 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * </p>
      * 
      * @param dm
-     *            not <code>null</code>. If the given coalitions are <code>null</code>, must be in this object.
+     *            not {@code null}. If the given coalitions are {@code null}, must be in this object.
      * @param coalitions
      *            the information to set. Any criterion having a weight defined and not existing in this object will be
-     *            added to this object. <code>null</code> to remove the coalitions.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            added to this object. {@code null} to remove the coalitions.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setCoalitions(DecisionMaker dm, Coalitions coalitions);
 
@@ -262,17 +262,17 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * Sets, replaces, or removes the evaluation of the given alternative according to the given criterion.
      * 
      * @param dm
-     *            not <code>null</code>. Must exist if the given value is <code>null</code>, otherwise, is added to this
+     *            not {@code null}. Must exist if the given value is {@code null}, otherwise, is added to this
      *            object if does not already exist.
      * @param alternative
-     *            not <code>null</code>. Must exist if the given value is <code>null</code>, otherwise, is added to this
+     *            not {@code null}. Must exist if the given value is {@code null}, otherwise, is added to this
      *            object if does not already exist.
      * @param criterion
-     *            not <code>null</code>. Must exist if the given value is <code>null</code>, otherwise, is added to this
+     *            not {@code null}. Must exist if the given value is {@code null}, otherwise, is added to this
      *            object if does not already exist.
      * @param value
-     *            <code>null</code> to remove a possibly previously associated value.
-     * @return <code>true</code> iff this call changed the data contained in this object.
+     *            {@code null} to remove a possibly previously associated value.
+     * @return {@code true} iff this call changed the data contained in this object.
      */
     public boolean setProfilesEvaluation(DecisionMaker dm, Alternative alternative, Criterion criterion, Double value);
 
@@ -282,12 +282,12 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * on which the given evaluations are defined are added, if not already existing, to this object.
      * 
      * @param dm
-     *            not <code>null</code>. Must exist if the given evaluations are <code>null</code>, otherwise, is added
+     *            not {@code null}. Must exist if the given evaluations are {@code null}, otherwise, is added
      *            to this object if not already exist.
      * @param evaluations
-     *            if <code>null</code>, the evaluations possibly associated with the given decision maker will be
+     *            if {@code null}, the evaluations possibly associated with the given decision maker will be
      *            removed.
-     * @return <code>true</code> iff this call changed this object.
+     * @return {@code true} iff this call changed this object.
      */
     public boolean setProfilesEvaluations(DecisionMaker dm, EvaluationsRead evaluations);
 
@@ -305,8 +305,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * </p>
      * 
      * @param thresholds
-     *            not <code>null</code>. If empty, every thresholds are removed.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            not {@code null}. If empty, every thresholds are removed.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setSharedThresholds(Thresholds thresholds);
 
@@ -324,7 +324,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * makers (meaning: same contents, not necessarily the same object).
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Coalitions getSharedCoalitions();
 
@@ -333,7 +333,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * preferential informations are not shared, the related view contents are empty. The returned object reads the data
      * (criteria, alternatives etc.) in the order provided by this object.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public ISortingPreferences getSharedPreferences();
 
@@ -349,8 +349,8 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * </p>
      * 
      * @param coalitions
-     *            not <code>null</code>. If empty, every coalitions are removed.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            not {@code null}. If empty, every coalitions are removed.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setSharedCoalitions(Coalitions coalitions);
 
@@ -368,7 +368,7 @@ public interface IGroupSortingPreferences extends IGroupSortingData {
      * every decision makers (meaning: same contents, not necessarily the same object).
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Thresholds getSharedThresholds();
 }

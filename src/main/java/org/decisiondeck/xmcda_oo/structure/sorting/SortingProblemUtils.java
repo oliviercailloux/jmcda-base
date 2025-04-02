@@ -75,9 +75,9 @@ public class SortingProblemUtils {
      * Replaces the contents in the given target by the given data.
      * 
      * @param data
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public static void copyDataToTarget(ISortingData data, ISortingData target) {
 	target.getAlternatives().clear();
@@ -99,8 +99,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public GroupSortingResultsWithOrder newGroupAssignmentsWithOrder(IGroupSortingAssignments source) {
 	final GroupSortingResultsImpl target = new GroupSortingResultsImpl();
@@ -116,9 +116,9 @@ public class SortingProblemUtils {
      * Replaces the contents in the given target by the given data.
      * 
      * @param data
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public static void copyGroupDataToTarget(IGroupSortingData data, IGroupSortingData target) {
 	copyDataToTarget(data, target);
@@ -130,8 +130,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public static IGroupSortingPreferences newGroupPreferences(IGroupSortingPreferences source) {
 	IGroupSortingPreferences target = newGroupPreferences();
@@ -143,9 +143,9 @@ public class SortingProblemUtils {
      * Replaces the contents in the given target by the given data. The target is set to not keep shared informations.
      * 
      * @param preferences
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public void copyGroupPreferencesToTarget(IGroupSortingPreferences preferences,
 	    IGroupSortingPreferences target) {
@@ -328,8 +328,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public static IGroupSortingAssignmentsToMultiple newGroupAssignmentsToMultiple(
 	    IGroupSortingAssignmentsToMultipleRead source) {
@@ -349,8 +349,8 @@ public class SortingProblemUtils {
      * change is not reflected.
      * 
      * @param groupSortingAssignments
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Set<Alternative> getAssignedAlternatives(
 	    IGroupSortingAssignmentsToMultipleRead groupSortingAssignments) {
@@ -418,8 +418,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public static IGroupSortingAssignments newGroupAssignments(IGroupSortingAssignments source) {
 	IGroupSortingAssignments target = newGroupAssignments();
@@ -439,8 +439,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public static IGroupSortingAssignmentsToMultiple newGroupAssignmentsToMultiple(IGroupSortingAssignments source) {
 	IGroupSortingAssignmentsToMultiple target = newGroupAssignmentsToMultiple();
@@ -482,8 +482,8 @@ public class SortingProblemUtils {
      * Copy constructor by value. No reference is held to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public GroupSortingResultsWithOrder newGroupResultsWithOrder(IGroupSortingResults source) {
 	final GroupSortingResultsImpl target = new GroupSortingResultsImpl();
@@ -512,7 +512,7 @@ public class SortingProblemUtils {
      * Associates the given scale to each criterion stored in the given problem.
      * 
      * @param scale
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public void setScales(IProblemData target, Interval scale) {
 	checkNotNull(scale);
@@ -526,9 +526,9 @@ public class SortingProblemUtils {
      * serves only to define iteration order.
      * 
      * @param alternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param evaluations
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     void addEvaluationsTo(Set<Alternative> alternatives, EvaluationsRead evaluations, ISortingData targetData) {
 	checkNotNull(alternatives);

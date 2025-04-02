@@ -11,25 +11,25 @@ import org.decision_deck.jmcda.structure.matrix.EvaluationsRead;
 /**
  * <p>
  * An object representing the objective data of a typical MCDA problem:
+ * </p>
  * <ul>
  * <li>Alternatives.</li>
  * <li>Criteria.</li>
  * <li>Alternative evaluations.</li>
  * <li>Evaluation scales for the criteria.</li>
  * </ul>
- * </p>
  * <p>
  * This object provides methods to check that it is in a consistent state. Note however that if its state is changed
  * after a check for consistency, the consistency is not guaranteed any more.
  * </p>
  * <p>
  * This object is consistent iff all the following holds.
+ * </p>
  * <ul>
  * <li>All the alternatives given by {@link #getAlternatives()} are evaluated on all the criteria given by
  * {@link #getCriteria()}. Thus the evaluation is complete.</li>
  * <li>All criteria have a preference direction set.</li>
  * </ul>
- * </p>
  * <p>
  * Read-only versions of this interface may be used where the setter methods throw {@link UnsupportedOperationException}
  * . Note that read-only does not imply immutable: the implementing class may be a read-only view of some mutable
@@ -63,7 +63,7 @@ public interface IProblemData {
      * evaluations are provided is a subset of the set returned by {@link #getCriteria()}.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      * 
      */
     public EvaluationsRead getAlternativesEvaluations();
@@ -71,14 +71,14 @@ public interface IProblemData {
     /**
      * Retrieves a writable view of the criteria.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Criterion> getCriteria();
 
     /**
      * Retrieves a writable view of the alternatives.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Alternative> getAlternatives();
 
@@ -86,7 +86,7 @@ public interface IProblemData {
      * Retrieves a read-only view of the scales. Scales are defined on all criteria in this object: adding a criterion
      * to this object automatically associates it with a scale representing the set of real numbers.
      * 
-     * @return not <code>null</code>, no <code>null</code> key or value.
+     * @return not {@code null}, no {@code null} key or value.
      */
     public Map<Criterion, Interval> getScales();
 
@@ -95,12 +95,12 @@ public interface IProblemData {
      * alternative and criterion are added to this object if necessary.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param value
-     *            <code>null</code> to remove a possibly previously associated value.
-     * @return <code>true</code> iff this call changed the data contained in this object.
+     *            {@code null} to remove a possibly previously associated value.
+     * @return {@code true} iff this call changed the data contained in this object.
      */
     public boolean setEvaluation(Alternative alternative, Criterion criterion, Double value);
 
@@ -110,8 +110,8 @@ public interface IProblemData {
      * if not already existing, to this object.
      * 
      * @param evaluations
-     *            if <code>null</code>, the possibly existing evaluations will be removed.
-     * @return <code>true</code> iff this call changed this object.
+     *            if {@code null}, the possibly existing evaluations will be removed.
+     * @return {@code true} iff this call changed this object.
      */
     public boolean setEvaluations(EvaluationsRead evaluations);
 
@@ -122,10 +122,10 @@ public interface IProblemData {
      * </p>
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param scale
-     *            <code>null</code> to remove a possibly previously associated scale.
-     * @return <code>true</code> iff this call changed the data contained in this object.
+     *            {@code null} to remove a possibly previously associated scale.
+     * @return {@code true} iff this call changed the data contained in this object.
      */
     public boolean setScale(Criterion criterion, Interval scale);
 }

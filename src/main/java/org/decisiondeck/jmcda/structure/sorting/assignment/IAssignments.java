@@ -26,10 +26,10 @@ public interface IAssignments extends IAssignmentsRead {
      * Sets, replaces, or removes the assignment of an alternative.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param category
-     *            <code>null</code> to remove the assignment.
-     * @return <code>true</code> iff the call changed the assignments, i.e. <code>true</code> iff the given alternative
+     *            {@code null} to remove the assignment.
+     * @return {@code true} iff the call changed the assignments, i.e. {@code true} iff the given alternative
      *         was assigned and the assignment has been removed, or was assigned to a different category, or was not
      *         assigned and has been assigned to a category.
      */

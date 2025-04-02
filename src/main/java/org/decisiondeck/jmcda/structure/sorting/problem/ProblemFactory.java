@@ -70,12 +70,12 @@ public class ProblemFactory {
      * </p>
      * 
      * @param evaluations
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param scales
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param catsAndProfs
-     *            may be <code>null</code>.
-     * @return not <code>null</code>.
+     *            may be {@code null}.
+     * @return not {@code null}.
      */
     static public ISortingData newSortingData(EvaluationsRead evaluations, Map<Criterion, Interval> scales,
 	    CatsAndProfs catsAndProfs) {
@@ -103,10 +103,10 @@ public class ProblemFactory {
      * concern different sets of criteria.
      * 
      * @param evaluations
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param scales
-     *            may be <code>null</code>.
-     * @return not <code>null</code>.
+     *            may be {@code null}.
+     * @return not {@code null}.
      */
     static public IProblemData newProblemData(EvaluationsRead evaluations, Map<Criterion, Interval> scales) {
 	final IProblemData data = newProblemData();
@@ -126,8 +126,8 @@ public class ProblemFactory {
      * Creates a problem data object that contains the given information.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public IProblemData newProblemData(IProblemData source) {
 	checkNotNull(source);
@@ -149,18 +149,18 @@ public class ProblemFactory {
      * </p>
      * 
      * @param alternativesEvaluations
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param scales
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param categories
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param profilesEvaluations
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param thresholds
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param coalitions
-     *            may be <code>null</code>.
-     * @return not <code>null</code>.
+     *            may be {@code null}.
+     * @return not {@code null}.
      */
     static public ISortingPreferences newSortingPreferences(EvaluationsRead alternativesEvaluations,
 	    Map<Criterion, Interval> scales, CatsAndProfs categories, EvaluationsRead profilesEvaluations,

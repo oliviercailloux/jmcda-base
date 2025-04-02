@@ -35,9 +35,9 @@ public class OrderedAssignmentsWithCredibilitiesFilteringOnCredibilities impleme
      * same set of assigned alternatives than the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsWithCredibilitiesFilteringOnCredibilities(
 	    IOrderedAssignmentsWithCredibilitiesRead delegate, Predicate<Double> predicate) {

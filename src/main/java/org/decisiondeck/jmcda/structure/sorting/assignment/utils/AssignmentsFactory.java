@@ -67,8 +67,8 @@ public class AssignmentsFactory {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      * @throws InvalidInputException
      *             if the source contains at least one alternative assigned to more than one category.
      */
@@ -109,8 +109,8 @@ public class AssignmentsFactory {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      * @throws InvalidInputException
      *             if the source contains at least one alternative assigned to more than one category.
      */
@@ -133,10 +133,10 @@ public class AssignmentsFactory {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param categories
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      * @throws InvalidInputException
      *             iff at least one alternative is assigned in source to a category not contained in the given
      *             categories.
@@ -157,8 +157,8 @@ public class AssignmentsFactory {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public IAssignmentsToMultiple newAssignmentsToMultiple(IAssignmentsToMultipleRead source) {
 	checkNotNull(source);

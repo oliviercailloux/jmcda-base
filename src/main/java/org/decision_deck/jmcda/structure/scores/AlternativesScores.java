@@ -23,7 +23,7 @@ import com.google.common.collect.Ordering;
  * sequence).
  * </p>
  * <p>
- * This map does not allow <code>null</code> keys or values. A put operation with a <code>null</code> value will throw
+ * This map does not allow {@code null} keys or values. A put operation with a {@code null} value will throw
  * an exception.
  * </p>
  * 
@@ -44,11 +44,11 @@ public class AlternativesScores extends ForwardingNavigableMap<Alternative, Doub
      * </P>
      * 
      * @param s2
-     *            the scores to which to compare this object for approximate equality. If <code>null</code>, this method
-     *            returns <code>false</code>.
+     *            the scores to which to compare this object for approximate equality. If {@code null}, this method
+     *            returns {@code false}.
      * @param imprecision
      *            the maximal imprecision allowed for accepting equality.
-     * @return <code>true</code> iff the given scores map is approximately equal to this one.
+     * @return {@code true} iff the given scores map is approximately equal to this one.
      */
     public boolean approxEquals(AlternativesScores s2, double imprecision) {
 	if (s2 == null) {

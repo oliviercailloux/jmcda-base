@@ -9,7 +9,7 @@ import com.google.common.collect.Iterators;
 class CatsAndProfsRead extends CatsAndProfsForwarder implements CatsAndProfs {
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public CatsAndProfsRead(CatsAndProfs delegate) {
 	super(delegate);

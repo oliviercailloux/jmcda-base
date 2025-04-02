@@ -38,8 +38,8 @@ public class CoalitionsUtils {
      * Retrieves a read-only view of the given coalitions.
      * 
      * @param delegate
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Coalitions asReadView(Coalitions delegate) {
 	checkNotNull(delegate);
@@ -53,10 +53,10 @@ public class CoalitionsUtils {
      * Retrieves a read-only view of the given coalitions, viewing only the criteria allowed by the given predicate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateCriteria
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Coalitions getFilteredView(Coalitions delegate, Predicate<Criterion> predicateCriteria) {
 	checkNotNull(delegate);
@@ -122,7 +122,7 @@ public class CoalitionsUtils {
      * Provides a copy of the given source contents.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public Coalitions newCoalitions(Coalitions source) {
 	if (source instanceof CoalitionsImpl) {

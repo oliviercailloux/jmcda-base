@@ -16,7 +16,7 @@ public class SortingDataForwarder implements ISortingData {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingDataForwarder(ISortingData delegate) {
 	Preconditions.checkNotNull(delegate);

@@ -6,7 +6,7 @@ import com.google.common.base.Objects.ToStringHelper;
 
 /**
  * <p>
- * A decision maker object. Has a unique id (not <code>null</code>).
+ * A decision maker object. Has a unique id (not {@code null}).
  * </p>
  * <p>
  * Objects of this type are immutable.
@@ -60,7 +60,7 @@ public class DecisionMaker implements Comparable<DecisionMaker> {
 
     /**
      * @param id
-     *            not <code>null</code>, not empty.
+     *            not {@code null}, not empty.
      */
     public DecisionMaker(String id) {
 	if (id == null || id.trim().length() == 0) {
@@ -80,14 +80,14 @@ public class DecisionMaker implements Comparable<DecisionMaker> {
 
     /**
      * <p>
-     * Retrieves a function which gives the id of the given decision maker. No <code>null</code> values are accepted.
+     * Retrieves a function which gives the id of the given decision maker. No {@code null} values are accepted.
      * </p>
      * <p>
      * This provides an easy way to get short debug strings. E.g. to get a string representing the contents of a set of
-     * decision makers <em>s</em>, use <code>Joiner.on(", ").join(Iterables.transform(s, getIdFct()))</code>.
+     * decision makers <em>s</em>, use {@code Joiner.on(", ").join(Iterables.transform(s, getIdFct()))}.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     static public Function<DecisionMaker, String> getIdFct() {
 	final Function<DecisionMaker, String> namer = new Function<DecisionMaker, String>() {

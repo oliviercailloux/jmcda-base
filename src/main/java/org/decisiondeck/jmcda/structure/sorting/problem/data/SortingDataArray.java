@@ -35,26 +35,26 @@ import com.google.common.collect.Maps.EntryTransformer;
 public class SortingDataArray extends SortingDataForwarder implements ISortingData {
 
     /**
-     * @return a copy, possibly immutable. Not <code>null</code>.
+     * @return a copy, possibly immutable. Not {@code null}.
      */
     public Map<Category, Integer> getCategoriesIndexes() {
 	return ImmutableMap.copyOf(idxCategories());
     }
 
     /**
-     * <code>null</code> when invalid.
+     * {@code null} when invalid.
      */
     private BiMap<Category, Integer> m_idxCategories;
     /**
-     * <code>null</code> when invalid.
+     * {@code null} when invalid.
      */
     private BiMap<Criterion, Integer> m_idxCriteria;
     /**
-     * <code>null</code> when invalid.
+     * {@code null} when invalid.
      */
     private BiMap<Alternative, Integer> m_idxProfiles;
     /**
-     * <code>null</code> when invalid.
+     * {@code null} when invalid.
      */
     private BiMap<Alternative, Integer> m_idxAlternatives;
 
@@ -140,28 +140,28 @@ public class SortingDataArray extends SortingDataForwarder implements ISortingDa
     }
 
     /**
-     * @return a copy, possibly immutable. Not <code>null</code>.
+     * @return a copy, possibly immutable. Not {@code null}.
      */
     public Map<Alternative, Integer> getProfilesIndexes() {
 	return ImmutableMap.copyOf(idxProfiles());
     }
 
     /**
-     * @return a copy, possibly immutable. Not <code>null</code>.
+     * @return a copy, possibly immutable. Not {@code null}.
      */
     public Map<Criterion, Integer> getCriteriaIndexes() {
 	return ImmutableMap.copyOf(idxCriteria());
     }
 
     /**
-     * @return a copy, possibly immutable. Not <code>null</code>.
+     * @return a copy, possibly immutable. Not {@code null}.
      */
     public Map<Alternative, Integer> getAlternativesIndexes() {
 	return ImmutableMap.copyOf(idxAlternatives());
     }
 
     /**
-     * @return a copy, possibly immutable. Not <code>null</code>.
+     * @return a copy, possibly immutable. Not {@code null}.
      */
     public Map<Category, Integer> getCategoriesRanks() {
 	// final Map<ImmutableCategory, Integer> ranks = Maps.transformValues(idxCategories(), new Function<Integer,

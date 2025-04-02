@@ -30,9 +30,9 @@ public class GroupSortingDataFiltering extends SortingDataForwarder implements I
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}, i.e. to not
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}, i.e. to not
      *            filter.
      */
     public GroupSortingDataFiltering(IGroupSortingData delegate, Predicate<Alternative> filterAlternatives) {
@@ -49,7 +49,7 @@ public class GroupSortingDataFiltering extends SortingDataForwarder implements I
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingDataFiltering(IGroupSortingData delegate) {
 	this(delegate, Predicates.<Alternative> alwaysTrue());
@@ -68,7 +68,7 @@ public class GroupSortingDataFiltering extends SortingDataForwarder implements I
 
 
     /**
-     * @return <code>null</code> for everything allowed.
+     * @return {@code null} for everything allowed.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesPredicate();
@@ -77,7 +77,7 @@ public class GroupSortingDataFiltering extends SortingDataForwarder implements I
     /**
      * NB currently not really implemented, restricts nothing.
      * 
-     * @return always <code>true</code>.
+     * @return always {@code true}.
      */
     public Predicate<Alternative> getProfilesFilter() {
 	return Predicates.alwaysTrue();

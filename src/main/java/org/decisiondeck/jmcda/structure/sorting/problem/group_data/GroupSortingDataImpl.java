@@ -22,7 +22,7 @@ public class GroupSortingDataImpl extends SortingDataForwarder implements IGroup
      * <em>not</em> be kept.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingDataImpl(ISortingData delegate) {
 	super(delegate);

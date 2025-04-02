@@ -34,12 +34,12 @@ public interface IOrderedAssignments extends IOrderedAssignmentsRead, IOrderedAs
      * have been defined.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param category
-     *            <code>null</code> or empty to assign the alternative to no category, i.e., to remove the assignment of
+     *            {@code null} or empty to assign the alternative to no category, i.e., to remove the assignment of
      *            the given alternative. Otherwise, must be contained in the categories returned by
      *            {@link #getCategories()}.
-     * @return <code>true</code> iff the call changed the assignments, i.e. true if the given alternative was assigned
+     * @return {@code true} iff the call changed the assignments, i.e. true if the given alternative was assigned
      *         and the assignment has been removed, or was assigned to a different category, or was not assigned and has
      *         been.
      */

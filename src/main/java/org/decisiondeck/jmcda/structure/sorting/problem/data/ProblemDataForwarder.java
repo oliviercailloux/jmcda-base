@@ -15,7 +15,7 @@ public class ProblemDataForwarder implements IProblemData {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public ProblemDataForwarder(IProblemData delegate) {
 	Preconditions.checkNotNull(delegate);

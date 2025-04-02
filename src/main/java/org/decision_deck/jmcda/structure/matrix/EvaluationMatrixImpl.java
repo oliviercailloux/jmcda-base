@@ -25,7 +25,7 @@ public class EvaluationMatrixImpl extends ForwardingSparseMatrix<Alternative, Cr
      * matrix will modify the given matrix as well.
      * 
      * @param matrix
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public EvaluationMatrixImpl(SparseMatrixD<Alternative, Criterion> matrix) {
 	super(matrix);

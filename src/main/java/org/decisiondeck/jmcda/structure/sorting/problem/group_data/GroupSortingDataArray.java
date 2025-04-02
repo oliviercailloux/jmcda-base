@@ -14,7 +14,7 @@ import com.google.common.collect.Maps;
 public class GroupSortingDataArray extends SortingDataArray implements IGroupSortingData {
 
     /**
-     * <code>null</code> when invalid.
+     * {@code null} when invalid.
      */
     private BiMap<DecisionMaker, Integer> m_idxDms;
 

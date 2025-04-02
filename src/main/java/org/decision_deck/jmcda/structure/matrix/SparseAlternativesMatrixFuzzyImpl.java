@@ -18,7 +18,7 @@ class SparseAlternativesMatrixFuzzyImpl extends ForwardingSparseMatrix<Alternati
      * Creates a new matrix decorating the given matrix by ensuring every element it contains is between zero and one.
      * 
      * @param delegate
-     *            not <code>null</code>, must be empty.
+     *            not {@code null}, must be empty.
      */
     SparseAlternativesMatrixFuzzyImpl(SparseMatrixD<Alternative, Alternative> delegate) {
 	super(new ValidatingDecoratedMatrix<Alternative, Alternative>(delegate, VALIDATOR));

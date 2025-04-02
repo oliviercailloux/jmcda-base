@@ -61,7 +61,7 @@ public class CatOrProf {
 
     /**
      * @param category
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public CatOrProf(Category category) {
 	checkNotNull(category);
@@ -71,7 +71,7 @@ public class CatOrProf {
 
     /**
      * @param profile
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public CatOrProf(Alternative profile) {
 	checkNotNull(profile);

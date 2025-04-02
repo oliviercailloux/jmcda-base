@@ -33,11 +33,11 @@ public class SortingPreferencesFiltering extends SortingDataForwarder implements
      * are untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      * @param predicateCriteria
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public SortingPreferencesFiltering(ISortingPreferences delegate, Predicate<Alternative> predicateAlternatives,
 	    Predicate<Criterion> predicateCriteria) {
@@ -49,7 +49,7 @@ public class SortingPreferencesFiltering extends SortingDataForwarder implements
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingPreferencesFiltering(ISortingPreferences delegate) {
 	this(delegate, null, null);
@@ -112,14 +112,14 @@ public class SortingPreferencesFiltering extends SortingDataForwarder implements
     }
 
     /**
-     * @return <code>null</code> for allow everything.
+     * @return {@code null} for allow everything.
      */
     public Predicate<Alternative> getAlternativesPredicate() {
 	return delegate().getAlternativesPredicate();
     }
 
     /**
-     * @return <code>null</code> to allow everything.
+     * @return {@code null} to allow everything.
      */
     public Predicate<Criterion> getCriteriaPredicate() {
 	return delegate().getCriteriaPredicate();

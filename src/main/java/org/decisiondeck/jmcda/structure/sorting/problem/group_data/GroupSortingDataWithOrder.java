@@ -17,7 +17,7 @@ public class GroupSortingDataWithOrder extends SortingDataWithOrder implements I
 
     /**
      * A set which duplicates the data found in the delegate sorting data and implementing the required sorting order.
-     * This set and the data in the delegate are kept in sync by this object. Is <code>null</code> iff the delegate data
+     * This set and the data in the delegate are kept in sync by this object. Is {@code null} iff the delegate data
      * order is used.
      */
     private NavigableSet<DecisionMaker> m_dmsOrderedSet;
@@ -41,7 +41,7 @@ public class GroupSortingDataWithOrder extends SortingDataWithOrder implements I
      * The default order uses the natural ordering.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingDataWithOrder(IGroupSortingData delegate) {
 	super(delegate);
@@ -70,10 +70,10 @@ public class GroupSortingDataWithOrder extends SortingDataWithOrder implements I
     /**
      * Retrieves the comparator defining the ordering on the decision makers used in this object. The comparator may not
      * define a total order, i.e. it may be defined over only a subset of the possible decision makers. However, the
-     * returned comparator, if not <code>null</code>, is defined over the whole set of decision makers used in this
+     * returned comparator, if not {@code null}, is defined over the whole set of decision makers used in this
      * object at the time this method returns.
      * 
-     * @return <code>null</code> iff no comparator set (uses delegate order).
+     * @return {@code null} iff no comparator set (uses delegate order).
      */
     public Comparator<? super DecisionMaker> getDmsComparator() {
 	return m_dmsOrderedSet == null ? null : m_dmsOrderedSet.comparator();

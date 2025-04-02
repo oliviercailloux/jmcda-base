@@ -28,7 +28,7 @@ public class SortingResultsFiltering extends SortingPreferencesForwarder impleme
      * Creates a read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingResultsFiltering(ISortingResults delegate) {
 	super(new SortingPreferencesFiltering(delegate));
@@ -38,12 +38,12 @@ public class SortingResultsFiltering extends SortingPreferencesForwarder impleme
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alsoFilterAssignments
-     *            <code>true</code> to apply the filter to the assignments contained in this object. Set this to
-     *            <code>false</code> if the predicate uses the assignments to determine if an alternative is filtered,
+     *            {@code true} to apply the filter to the assignments contained in this object. Set this to
+     *            {@code false} if the predicate uses the assignments to determine if an alternative is filtered,
      *            otherwize an infinite recursion will occur (filter defined according to the assignments which require
      *            the filter to be determined).
      */
@@ -79,7 +79,7 @@ public class SortingResultsFiltering extends SortingPreferencesForwarder impleme
     }
 
     /**
-     * @return <code>null</code> for allow everything.
+     * @return {@code null} for allow everything.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesPredicate();

@@ -34,8 +34,8 @@ import org.decision_deck.jmcda.structure.sorting.category.Category;
 public interface IAssignmentsRead extends IAssignmentsToMultipleRead {
     /**
      * @param alternative
-     *            not <code>null</code>.
-     * @return the category to which this alternative is assigned, or <code>null</code> iff this alternative is not
+     *            not {@code null}.
+     * @return the category to which this alternative is assigned, or {@code null} iff this alternative is not
      *         assigned.
      */
     public Category getCategory(Alternative alternative);
@@ -47,9 +47,9 @@ public interface IAssignmentsRead extends IAssignmentsToMultipleRead {
      * clearer.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a set containing exactly one element, namely the category to which the given alternative is assigned, or
-     *         <code>null</code> iff the alternative is not assigned.
+     *         {@code null} iff the alternative is not assigned.
      */
     @Override
     public Set<Category> getCategories(Alternative alternative);

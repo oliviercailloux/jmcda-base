@@ -29,8 +29,8 @@ public class ProblemViewFactory {
      * Retrieves a writable view that delegates to the shared preferential informations in the given delegate.
      * 
      * @param groupDelegate
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public ISortingPreferences getSortingPreferencesGroupBacked(IGroupSortingPreferences groupDelegate) {
 	return new SortingPreferencesViewGroupBacked(groupDelegate);
@@ -41,12 +41,12 @@ public class ProblemViewFactory {
      * are filtered, the profiles are untouched.
      * 
      * @param preferences
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateAlternatives
-     *            <code>null</code> to not filter alternatives.
+     *            {@code null} to not filter alternatives.
      * @param predicateCriteria
-     *            <code>null</code> to not filter criteria.
-     * @return not <code>null</code>.
+     *            {@code null} to not filter criteria.
+     * @return not {@code null}.
      */
     public static ISortingPreferences getRestrictedPreferences(ISortingPreferences preferences,
 	    Predicate<Alternative> predicateAlternatives, Predicate<Criterion> predicateCriteria) {
@@ -60,12 +60,12 @@ public class ProblemViewFactory {
      * Retrieves a view that sees only alternatives and criteria satisfying the given predicate.
      * 
      * @param data
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateAlternatives
-     *            <code>null</code> to not filter alternatives.
+     *            {@code null} to not filter alternatives.
      * @param predicateCriteria
-     *            <code>null</code> to not filter criteria.
-     * @return not <code>null</code>.
+     *            {@code null} to not filter criteria.
+     * @return not {@code null}.
      */
     public static ISortingData getRestrictedSortingData(ISortingData data,
             Predicate<Alternative> predicateAlternatives, Predicate<Criterion> predicateCriteria) {
@@ -77,11 +77,11 @@ public class ProblemViewFactory {
 
     /**
      * Retrieves view of the preferences contained in the given group preferences, per decision maker, plus the shared
-     * preferences view which is bound to the <code>null</code> key.
+     * preferences view which is bound to the {@code null} key.
      * 
      * @param groupPreferences
-     *            not <code>null</code>.
-     * @return not <code>null</code>, at least one entry.
+     *            not {@code null}.
+     * @return not {@code null}, at least one entry.
      */
     static public Map<DecisionMaker, ISortingPreferences> getPreferencesPerDmWithNull(
 	    IGroupSortingPreferences groupPreferences) {
@@ -99,12 +99,12 @@ public class ProblemViewFactory {
      * Retrieves a view that sees only alternatives and criteria satisfying the given predicate.
      * 
      * @param data
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateAlternatives
-     *            <code>null</code> to not filter alternatives.
+     *            {@code null} to not filter alternatives.
      * @param predicateCriteria
-     *            <code>null</code> to not filter criteria.
-     * @return not <code>null</code>.
+     *            {@code null} to not filter criteria.
+     * @return not {@code null}.
      */
     public static IProblemData getRestrictedData(IProblemData data,
             Predicate<Alternative> predicateAlternatives, Predicate<Criterion> predicateCriteria) {

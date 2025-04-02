@@ -104,7 +104,7 @@ public class WeightsImpl extends ObservableMap<Criterion, Double> implements Wei
 
     /**
      * Vocabulary note: this object is dirty iff the cached computations must be re-computed. This field is
-     * <code>true</code> iff this object is dirty.
+     * {@code true} iff this object is dirty.
      */
     private boolean m_dirty;
 
@@ -124,7 +124,7 @@ public class WeightsImpl extends ObservableMap<Criterion, Double> implements Wei
      * This object assumes ownership of the delegate map.
      * 
      * @param delegateMap
-     *            no <code>null</code> key or values, all values at least zero.
+     *            no {@code null} key or values, all values at least zero.
      */
     private WeightsImpl(Map<Criterion, Double> delegateMap) {
 	super(Maps.filterEntries(delegateMap, ZE_PREDICATE));

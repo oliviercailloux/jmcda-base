@@ -104,10 +104,10 @@ public class Intervals {
      * Reports whether the given value is in the boundaries defined by the given scale.
      * 
      * @param scale
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param value
      *            not a NaN, may be infinite.
-     * @return <code>true</code> iff the given value is between the minimum and the maximum of the scale.
+     * @return {@code true} iff the given value is between the minimum and the maximum of the scale.
      */
     static public boolean inBoundaries(Interval scale, double value) {
 	checkNotNull(scale);
@@ -119,7 +119,7 @@ public class Intervals {
      * Creates a new real interval, with no minimum or maximum bounds, representing the given preference direction.
      * 
      * @param direction
-     *            <code>null</code> for not set.
+     *            {@code null} for not set.
      * @return a new interval.
      */
     static public Interval newDirection(PreferenceDirection direction) {
@@ -128,7 +128,7 @@ public class Intervals {
 
     /**
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, not infinite.
      * @param maximum
@@ -144,7 +144,7 @@ public class Intervals {
 
     /**
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, not infinite.
      * @param maximum
@@ -189,7 +189,7 @@ public class Intervals {
      * Creates an interval with possibly infinite lower and upper bounds.
      * 
      * @param direction
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param minimum
      *            a real number, or negative infinity.
      * @param maximum
