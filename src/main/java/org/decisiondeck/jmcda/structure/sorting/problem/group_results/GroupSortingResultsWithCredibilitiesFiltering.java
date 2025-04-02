@@ -36,7 +36,7 @@ public class GroupSortingResultsWithCredibilitiesFiltering extends GroupSortingP
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingResultsWithCredibilitiesFiltering(IGroupSortingResultsWithCredibilities delegate) {
 	this(delegate, Predicates.<Alternative> alwaysTrue());
@@ -48,9 +48,9 @@ public class GroupSortingResultsWithCredibilitiesFiltering extends GroupSortingP
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public GroupSortingResultsWithCredibilitiesFiltering(IGroupSortingResultsWithCredibilities delegate,
 	    Predicate<Alternative> filterAlternatives) {

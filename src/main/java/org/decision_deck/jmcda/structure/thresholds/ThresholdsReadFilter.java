@@ -20,9 +20,9 @@ class ThresholdsReadFilter extends ThresholdsMapBased implements Thresholds {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param criteriaPredicate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public ThresholdsReadFilter(Thresholds delegate, Predicate<Criterion> criteriaPredicate) {
 	checkNotNull(delegate);

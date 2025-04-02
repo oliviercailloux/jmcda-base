@@ -13,7 +13,7 @@ public interface IGroupSortingAssignmentsToMultipleRead extends IGroupSortingDat
     public IOrderedAssignmentsToMultipleRead getAssignments(DecisionMaker dm);
 
     /**
-     * @return <code>true</code> iff all alternatives contained in this object have been assigned by all the decision
+     * @return {@code true} iff all alternatives contained in this object have been assigned by all the decision
      *         makers.
      */
     public boolean hasCompleteAssignments();

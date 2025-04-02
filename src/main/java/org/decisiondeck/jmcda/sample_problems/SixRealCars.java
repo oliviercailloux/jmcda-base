@@ -445,7 +445,7 @@ public class SixRealCars {
 	 * Retrieves the concordance, restricted to the first three alternatives,
 	 * and taking only into account the first two criteria.
 	 *
-	 * @return not <code>null</code>.
+	 * @return not {@code null}.
 	 */
 	public SparseAlternativesMatrixFuzzy getConcordanceRestricted() {
 		/** Results exact to the fourth decimal (rounded). */

@@ -28,7 +28,7 @@ public class AssignmentsWithCredibilitiesFiltering implements IAssignmentsWithCr
      * Creates a new read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AssignmentsWithCredibilitiesFiltering(IAssignmentsWithCredibilitiesRead delegate) {
 	Preconditions.checkNotNull(delegate);
@@ -38,9 +38,9 @@ public class AssignmentsWithCredibilitiesFiltering implements IAssignmentsWithCr
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AssignmentsWithCredibilitiesFiltering(IAssignmentsWithCredibilitiesRead delegate,
 	    Predicate<Alternative> filterAlternatives) {

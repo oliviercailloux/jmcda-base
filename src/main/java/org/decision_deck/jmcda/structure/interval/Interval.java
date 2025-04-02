@@ -37,7 +37,7 @@ public interface Interval {
      * Retrieves a facade permitting easier usage of this interval when it represents a discrete interval.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public DiscreteInterval getAsDiscreteInterval();
 
@@ -86,15 +86,15 @@ public interface Interval {
     /**
      * Retrieves the preference direction associated to this interval.
      * 
-     * @return <code>null</code> for not set.
+     * @return {@code null} for not set.
      */
     public PreferenceDirection getPreferenceDirection();
 
     /**
-     * Retrieves the step size bound to this interval, or <code>null</code> if no step size is defined. If the step size
+     * Retrieves the step size bound to this interval, or {@code null} if no step size is defined. If the step size
      * is defined, the minimum of this interval is a real, thus non-infinite, number.
      * 
-     * @return <code>null</code> for no step size, or a number greater than zero.
+     * @return {@code null} for no step size, or a number greater than zero.
      */
     public Double getStepSize();
 

@@ -27,16 +27,16 @@ public class EvaluationsUtils {
     }
 
     /**
-     * Returns a matrix containing the mappings in <code>unfiltered</code> satisfying the given predicates. The returned
-     * matrix is a live view of <code>unfiltered</code>; changes to the source affects the view.
+     * Returns a matrix containing the mappings in {@code unfiltered} satisfying the given predicates. The returned
+     * matrix is a live view of {@code unfiltered}; changes to the source affects the view.
      * 
      * @param unfiltered
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alternativePredicate
-     *            not <code>null</code>, use {@link Predicates#alwaysTrue()} for no restriction.
+     *            not {@code null}, use {@link Predicates#alwaysTrue()} for no restriction.
      * @param criterionPredicate
-     *            not <code>null</code>, use {@link Predicates#alwaysTrue()} for no restriction.
-     * @return not <code>null</code>, a read-only view.
+     *            not {@code null}, use {@link Predicates#alwaysTrue()} for no restriction.
+     * @return not {@code null}, a read-only view.
      */
     static public EvaluationsRead getFilteredView(EvaluationsRead unfiltered,
 	    Predicate<Alternative> alternativePredicate, Predicate<Criterion> criterionPredicate) {
@@ -49,8 +49,8 @@ public class EvaluationsUtils {
      * copy.
      * 
      * @param source
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     public static Evaluations newEvaluationMatrix(EvaluationsRead source) {
 	checkNotNull(source);
@@ -74,9 +74,9 @@ public class EvaluationsUtils {
      * this method.
      * 
      * @param m1
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param m2
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a copy of all entries.
      */
     public static Evaluations merge(SparseMatrixDRead<Alternative, Criterion> m1,
@@ -95,8 +95,8 @@ public class EvaluationsUtils {
      * Should be replaced by Matrix.asTable().columnMap() but table view is not yet fully implemented.
      * 
      * @param evaluations
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Map<Criterion, Map<Alternative, Double>> asColumnMap(final EvaluationsRead evaluations) {
 	checkNotNull(evaluations);
@@ -128,16 +128,16 @@ public class EvaluationsUtils {
      * criteria, thus, after rename.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param renameAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param renameCriteria
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param orderAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param orderCriteria
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public Evaluations newRenamedAndOrdered(EvaluationsRead source,
 	    Function<? super Alternative, Alternative> renameAlternatives,

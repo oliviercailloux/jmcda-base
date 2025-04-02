@@ -8,7 +8,7 @@ import com.google.common.base.Objects.ToStringHelper;
 
 /**
  * <p>
- * A criterion object. Has a unique id (not <code>null</code>).
+ * A criterion object. Has a unique id (not {@code null}).
  * </p>
  * <p>
  * A criterion may also represent an attribute, depending on the context. An advantage is that a matrix of evaluation of
@@ -28,13 +28,13 @@ import com.google.common.base.Objects.ToStringHelper;
  */
 public class Criterion implements Comparable<Criterion> {
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private final String m_id;
 
     /**
      * @param id
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public Criterion(final String id) {
 	checkNotNull(id);
@@ -45,7 +45,7 @@ public class Criterion implements Comparable<Criterion> {
      * Creates a new criterion by copying the one given.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public Criterion(Criterion criterion) {
 	if (criterion == null) {
@@ -98,14 +98,14 @@ public class Criterion implements Comparable<Criterion> {
 
     /**
      * <p>
-     * Retrieves a function which gives the id of the given criterion. No <code>null</code> values are accepted.
+     * Retrieves a function which gives the id of the given criterion. No {@code null} values are accepted.
      * </p>
      * <p>
      * This provides an easy way to get short debug strings. E.g. to get a string representing the contents of a set of
-     * criteria <em>s</em>, use <code>Joiner.on(", ").join(Iterables.transform(s, getIdFct()))</code>.
+     * criteria <em>s</em>, use {@code Joiner.on(", ").join(Iterables.transform(s, getIdFct()))}.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     static public Function<Criterion, String> getIdFct() {
 	final Function<Criterion, String> namer = new Function<Criterion, String>() {

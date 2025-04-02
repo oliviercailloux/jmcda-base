@@ -24,7 +24,7 @@ class CoalitionsView implements Coalitions {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public CoalitionsView(Coalitions delegate) {
 	this(delegate, Predicates.<Criterion> alwaysTrue());
@@ -35,9 +35,9 @@ class CoalitionsView implements Coalitions {
      * criteria not permitted by the given predicate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param criteriaPredicate
-     *            <code>null</code> to allow everything.
+     *            {@code null} to allow everything.
      */
     public CoalitionsView(Coalitions delegate, Predicate<Criterion> criteriaPredicate) {
 	checkNotNull(delegate);

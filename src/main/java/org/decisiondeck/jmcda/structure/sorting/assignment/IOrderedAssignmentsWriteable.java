@@ -32,9 +32,9 @@ public interface IOrderedAssignmentsWriteable extends IOrderedAssignmentsToMulti
      * </p>
      * 
      * @param categories
-     *            <code>null</code> to remove the associated categories (all the orderings are lost), authorized only
+     *            {@code null} to remove the associated categories (all the orderings are lost), authorized only
      *            when no assignments are contained in this object. Must be a superset of the categories already used.
-     * @return <code>true</code> iff the categories changed.
+     * @return {@code true} iff the categories changed.
      */
     public boolean setCategories(SortedSet<Category> categories);
 

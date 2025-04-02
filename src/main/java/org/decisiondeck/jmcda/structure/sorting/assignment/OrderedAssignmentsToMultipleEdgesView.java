@@ -45,7 +45,7 @@ public class OrderedAssignmentsToMultipleEdgesView implements IOrderedAssignment
      * delegate will always contain contiguous assignments.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsToMultipleEdgesView(IOrderedAssignmentsToMultipleRead delegate) {
 	Preconditions.checkNotNull(delegate);

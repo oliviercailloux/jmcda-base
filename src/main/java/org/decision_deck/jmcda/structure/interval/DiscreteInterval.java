@@ -17,7 +17,7 @@ public class DiscreteInterval implements Interval {
 
     /**
      * @param delegate
-     *            not <code>null</code>, must represent a discrete interval thus must have a step size defined (which
+     *            not {@code null}, must represent a discrete interval thus must have a step size defined (which
      *            also implies a non infinite minimum).
      */
     public DiscreteInterval(Interval delegate) {
@@ -35,8 +35,8 @@ public class DiscreteInterval implements Interval {
      * @param value
      *            the value to target.
      * @param roundToCeiling
-     *            in case the given value is exactly between two steps, and this is <code>true</code>, the returned
-     *            value will be the highest step, if this is <code>false</code>, the smallest one will be returned.
+     *            in case the given value is exactly between two steps, and this is {@code true}, the returned
+     *            value will be the highest step, if this is {@code false}, the smallest one will be returned.
      * @return a value in this interval.
      */
     public double getClosest(double value, boolean roundToCeiling) {
@@ -101,7 +101,7 @@ public class DiscreteInterval implements Interval {
     /**
      * Retrieves the step size.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public Double getStepSize() {
@@ -147,7 +147,7 @@ public class DiscreteInterval implements Interval {
 
     /**
      * Retrieves the step size bound to this discrete interval, which is the value returned by {@link #getStepSize()}
-     * with the supplementary guarantee that it is non <code>null</code>.
+     * with the supplementary guarantee that it is non {@code null}.
      * 
      * @return a number greater than zero.
      */

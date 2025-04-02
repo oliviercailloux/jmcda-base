@@ -9,6 +9,7 @@ import org.decision_deck.jmcda.structure.sorting.category.CatsAndProfs;
 /**
  * <p>
  * An object representing the objective data of a typical sorting problem:
+ * </p>
  * <ul>
  * <li>Alternatives.</li>
  * <li>Criteria.</li>
@@ -16,13 +17,13 @@ import org.decision_deck.jmcda.structure.sorting.category.CatsAndProfs;
  * <li>Categories and profiles.</li>
  * <li>Evaluation scales for the criteria.</li>
  * </ul>
- * </p>
  * <p>
  * This object provides methods to check that it is in a consistent state. Note however that if its state is changed
  * after a check for consistency, the consistency is not guaranteed any more.
  * </p>
  * <p>
  * This object is consistent iff all the following holds.
+ * </p>
  * <ul>
  * <li>All the alternatives given by {@link #getAlternatives()} are evaluated on all the criteria given by
  * {@link #getCriteria()}. Thus the evaluation is complete.</li>
@@ -32,7 +33,6 @@ import org.decision_deck.jmcda.structure.sorting.category.CatsAndProfs;
  * set of profiles given by {@link #getProfiles()}.</li>
  * <li>All criteria have a preference direction set.</li>
  * </ul>
- * </p>
  * <p>
  * Read-only versions of this interface may be used where the setter methods throw {@link UnsupportedOperationException}
  * . Note that read-only does not imply immutable: the implementing class may be a read-only view of some mutable
@@ -80,7 +80,7 @@ public interface ISortingData extends IProblemData {
      * a profile to the returned object adds it to this object as well. Removing a profile from the returned object does
      * not remove the profile from the set of profiles contained in this object and retrieved by {@link #getProfiles()}.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public CatsAndProfs getCatsAndProfs();
 

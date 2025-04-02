@@ -6,7 +6,7 @@ import com.google.common.base.Function;
 
 /**
  * <p>
- * An alternative, or action, decision object, option, choice proposal, etc. Has a unique id (not <code>null</code>).
+ * An alternative, or action, decision object, option, choice proposal, etc. Has a unique id (not {@code null}).
  * </p>
  * <p>
  * Objects of this type are immutable.
@@ -22,7 +22,7 @@ public class Alternative implements Comparable<Alternative> {
     }
 
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private final String m_id;
 
@@ -40,7 +40,7 @@ public class Alternative implements Comparable<Alternative> {
      * Builds an alternative (which is, by default, not fictitious).
      * 
      * @param id
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public Alternative(String id) {
 	checkNotNull(id);
@@ -88,14 +88,14 @@ public class Alternative implements Comparable<Alternative> {
 
     /**
      * <p>
-     * Retrieves a function which gives the id of the given alternative. No <code>null</code> values are accepted.
+     * Retrieves a function which gives the id of the given alternative. No {@code null} values are accepted.
      * </p>
      * <p>
      * This provides an easy way to get short debug strings. E.g. to get a string representing the contents of a set of
-     * alternatives <em>s</em>, use <code>Joiner.on(", ").join(Iterables.transform(s, getIdFct()))</code>.
+     * alternatives <em>s</em>, use {@code Joiner.on(", ").join(Iterables.transform(s, getIdFct()))}.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     static public Function<Alternative, String> getIdFct() {
 	final Function<Alternative, String> alternativeNamer = new Function<Alternative, String>() {

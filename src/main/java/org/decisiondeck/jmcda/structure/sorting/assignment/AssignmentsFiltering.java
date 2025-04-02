@@ -23,9 +23,9 @@ public class AssignmentsFiltering implements IAssignmentsRead {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AssignmentsFiltering(IAssignments delegate, Predicate<Alternative> filterAlternatives) {
 	Preconditions.checkNotNull(delegate);

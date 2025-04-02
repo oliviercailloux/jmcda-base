@@ -35,9 +35,9 @@ public interface IOrderedAssignmentsToMultipleRead extends IAssignmentsToMultipl
      * That ordering is compatible with the ordering given by {@link #getCategories()}.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a (possibly read-only) copy of the set of categories to which this alternative is assigned, or
-     *         <code>null</code> iff the alternative is not assigned. If the assignment related to the given alternative
+     *         {@code null} iff the alternative is not assigned. If the assignment related to the given alternative
      *         later change, this change is not reflected to the object this method returns.
      */
     @Override
@@ -55,7 +55,7 @@ public interface IOrderedAssignmentsToMultipleRead extends IAssignmentsToMultipl
      * not reflected to the object this method returns).
      * </p>
      * 
-     * @return a set, not <code>null</code>, possibly empty if no alternatives are assigned.
+     * @return a set, not {@code null}, possibly empty if no alternatives are assigned.
      */
     @Override
     public NavigableSet<Category> getCategories();
@@ -63,24 +63,24 @@ public interface IOrderedAssignmentsToMultipleRead extends IAssignmentsToMultipl
     /**
      * <p>
      * Indicates whether the given object is equal to this one.
+     * </p>
      * <ul>
-     * <li>Supposing this object does not implement {@link IAssignmentsWithCredibilitiesRead}, this is <code>true</code>
+     * <li>Supposing this object does not implement {@link IAssignmentsWithCredibilitiesRead}, this is {@code true}
      * iff the given object is a IOrderedAssignmentsToMultipleRead, does not implement the mentioned interface either,
      * and contains the same alternatives assigned to the same categories and the same set of overall categories as this
      * object in the same order.</li>
      * <li>If the given object does not implement {@link IOrderedAssignmentsToMultipleRead}, this method returns
-     * <code>false</code>.</li>
+     * {@code false}.</li>
      * <li>If this object and the compared object both have credibilities, a supplementary condition is added for the
      * objects to be equal, namely that the assignments must be associated with the same credibilities to the same
      * categories.</li>
      * <li>If this object does not have credibilities but the given object does, or conversely, they are never
      * considered equal.</li>
      * </ul>
-     * </p>
      * 
      * @param obj
-     *            may be <code>null</code>.
-     * @return <code>true</code> iff both objects are considered equal.
+     *            may be {@code null}.
+     * @return {@code true} iff both objects are considered equal.
      */
     @Override
     public boolean equals(Object obj);

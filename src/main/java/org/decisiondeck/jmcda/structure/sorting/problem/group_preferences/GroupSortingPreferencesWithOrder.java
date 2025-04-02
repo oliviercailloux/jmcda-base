@@ -46,7 +46,7 @@ public class GroupSortingPreferencesWithOrder extends GroupSortingDataWithOrder 
      * The default order uses the natural ordering.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingPreferencesWithOrder(IGroupSortingPreferences delegate) {
 	super(delegate);

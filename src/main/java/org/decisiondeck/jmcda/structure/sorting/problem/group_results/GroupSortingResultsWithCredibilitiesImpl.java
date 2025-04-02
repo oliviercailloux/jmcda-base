@@ -84,7 +84,7 @@ public class GroupSortingResultsWithCredibilitiesImpl extends GroupSortingPrefer
      * the map is populated.
      * </p>
      * <p>
-     * No <code>null</code> values or keys (but assignments objects may be empty).
+     * No {@code null} values or keys (but assignments objects may be empty).
      * </p>
      * <p>
      * Once an assignment object has been created for a decision maker, it must not be replaced, but its internal state
@@ -109,7 +109,7 @@ public class GroupSortingResultsWithCredibilitiesImpl extends GroupSortingPrefer
      * delegate should <em>not</em> be kept.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingResultsWithCredibilitiesImpl(IGroupSortingPreferences delegate) {
 	super(delegate);
@@ -145,7 +145,7 @@ public class GroupSortingResultsWithCredibilitiesImpl extends GroupSortingPrefer
     /**
      * @param dm
      *            must be in this object.
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     private IOrderedAssignmentsWithCredibilities lazyInitAssignments(DecisionMaker dm) {
 	if (!getDms().contains(dm)) {

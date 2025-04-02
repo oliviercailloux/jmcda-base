@@ -18,6 +18,7 @@ import org.decisiondeck.jmcda.structure.sorting.problem.data.ISortingData;
  * </p>
  * <p>
  * This object is consistent iff all the following holds.
+ * </p>
  * <ul>
  * <li>All the alternatives given by {@link #getAlternatives()} are evaluated on all the criteria given by
  * {@link #getCriteria()}. Thus the evaluation is complete.</li>
@@ -28,7 +29,6 @@ import org.decisiondeck.jmcda.structure.sorting.problem.data.ISortingData;
  * <li>All criteria have a preference direction set.</li>
  * <li>This object contains at least one decision maker.</li>
  * </ul>
- * </p>
  * <p>
  * Implementing objects may override this consistency definition provided that theirs is stronger, i.e., the object
  * being consistent considering its own definition must imply consistency considering this definition.
@@ -63,7 +63,7 @@ public interface IGroupSortingData extends ISortingData {
      * Retrieves a writeable view of the decision makers. When a decision maker is removed from the given set, all
      * informations bound to the given decision maker in this object is removed as well.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<DecisionMaker> getDms();
 }

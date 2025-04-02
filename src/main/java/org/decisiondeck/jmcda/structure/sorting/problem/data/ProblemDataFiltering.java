@@ -35,7 +35,7 @@ import com.google.common.collect.Sets;
 public class ProblemDataFiltering implements IProblemData {
 
     /**
-     * <code>null</code> for no filter.
+     * {@code null} for no filter.
      */
     private final Predicate<Alternative> m_predicateAlternatives;
     private final IProblemData m_delegate;
@@ -45,7 +45,7 @@ public class ProblemDataFiltering implements IProblemData {
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public ProblemDataFiltering(ISortingData delegate) {
 	this(delegate, null, null);
@@ -57,11 +57,11 @@ public class ProblemDataFiltering implements IProblemData {
      * {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicateAlternatives
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      * @param predicateCriteria
-     *            <code>null</code> to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
+     *            {@code null} to allow everything (equivalent to {@link Predicates#alwaysTrue()}.
      */
     public ProblemDataFiltering(IProblemData delegate, Predicate<Alternative> predicateAlternatives,
 	    Predicate<Criterion> predicateCriteria) {
@@ -114,14 +114,14 @@ public class ProblemDataFiltering implements IProblemData {
     }
 
     /**
-     * @return <code>null</code> for allow everything.
+     * @return {@code null} for allow everything.
      */
     public Predicate<Alternative> getAlternativesPredicate() {
 	return m_predicateAlternatives;
     }
 
     /**
-     * @return <code>null</code> to allow everything.
+     * @return {@code null} to allow everything.
      */
     public Predicate<Criterion> getCriteriaPredicate() {
 	return m_predicateCriteria;

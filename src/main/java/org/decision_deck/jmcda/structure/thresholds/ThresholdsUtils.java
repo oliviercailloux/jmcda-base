@@ -91,7 +91,7 @@ public class ThresholdsUtils {
      * returned thresholds. The returned object has no vetoes thresholds.
      * 
      * @param criteria
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a read-only view of thresholds.
      */
     static public Thresholds getZeroes(Set<Criterion> criteria) {

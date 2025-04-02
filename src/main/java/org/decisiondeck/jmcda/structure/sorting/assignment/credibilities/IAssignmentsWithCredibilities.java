@@ -22,12 +22,12 @@ public interface IAssignmentsWithCredibilities extends IAssignmentsWithCredibili
      * that the given alternative is not assigned to the corresponding category.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param credibilities
-     *            <code>null</code> or empty to assign the alternative to no category, i.e., to remove the assignment of
-     *            the given alternative. The map entries may not contain a <code>null</code> key or value, the values
+     *            {@code null} or empty to assign the alternative to no category, i.e., to remove the assignment of
+     *            the given alternative. The map entries may not contain a {@code null} key or value, the values
      *            must be positive or zero. If the map contains only zeroes, it is considered empty.
-     * @return <code>true</code> iff the call changed the assignments, i.e., iff the assignment existed and has been
+     * @return {@code true} iff the call changed the assignments, i.e., iff the assignment existed and has been
      *         removed, or existed and has changed (be it a change in some credibility degrees or a change of category),
      *         or did not exist and has been added.
      */

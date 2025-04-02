@@ -22,11 +22,11 @@ import com.google.common.collect.Sets;
 public class CatsAndProfsImpl implements CatsAndProfs {
 	private final class IteratorImpl implements Iterator<CatOrProf> {
 		/**
-		 * <code>null</code> for not yet iterated.
+		 * {@code null} for not yet iterated.
 		 */
 		private CatOrProf m_current;
 		/**
-		 * <code>null</code> for not computed yet or no next (end of iterator).
+		 * {@code null} for not computed yet or no next (end of iterator).
 		 */
 		private CatOrProf m_next;
 
@@ -136,11 +136,11 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 	 * (not needed).
 	 * </p>
 	 * <p>
-	 * Contains a <code>null</code> value for a given <code>profile</code> key
+	 * Contains a {@code null} value for a given {@code profile} key
 	 * iff no down category is associated with that profile, i.e., when no
-	 * category has <code>profile</code> as an up profile. The set of profiles
+	 * category has {@code profile} as an up profile. The set of profiles
 	 * contains all profiles, even those not yet assigned to any category which
-	 * have a <code>null</code> value.
+	 * have a {@code null} value.
 	 * </p>
 	 * <p>
 	 * Note that some categories could have no up profile, thus the set of
@@ -707,9 +707,9 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 	 * until a profile is found.
 	 *
 	 * @param category
-	 *            not <code>null</code>, must be in this object.
+	 *            not {@code null}, must be in this object.
 	 * @return the closest profile up to the given category which is not
-	 *         <code>null</code>, or <code>null</code> iff all categories better
+	 *         {@code null}, or {@code null} iff all categories better
 	 *         than and including the given one have no up profile set.
 	 */
 	private Alternative getFollowingProfile(Category category) {
@@ -817,9 +817,9 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 	 * until a profile is found.
 	 *
 	 * @param category
-	 *            not <code>null</code>, must be in this object.
+	 *            not {@code null}, must be in this object.
 	 * @return the closest profile down to the given category which is not
-	 *         <code>null</code>, or <code>null</code> iff all categories worst
+	 *         {@code null}, or {@code null} iff all categories worst
 	 *         than and including the given one have no down profile set.
 	 */
 	private Alternative getPrecedingProfile(Category category) {
@@ -835,19 +835,19 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 
 	/**
 	 * @param toRemove
-	 *            not <code>null</code>.
+	 *            not {@code null}.
 	 * @param previousProfile
 	 *            immediately preceeding (no category in between), may be
-	 *            <code>null</code>.
+	 *            {@code null}.
 	 * @param nextProfile
 	 *            immediately following (no category in between), may be
-	 *            <code>null</code>.
+	 *            {@code null}.
 	 * @param previousCategory
 	 *            has the profile to remove as up profile, may be
-	 *            <code>null</code>.
+	 *            {@code null}.
 	 * @param nextCategory
 	 *            has the profile to remove as down profile, may be
-	 *            <code>null</code>.
+	 *            {@code null}.
 	 */
 	private void removeProfileInternal(final Alternative toRemove, Alternative previousProfile, Alternative nextProfile,
 			Category previousCategory, Category nextCategory) {
@@ -878,10 +878,10 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 
 	/**
 	 * @param currentCategory
-	 *            not <code>null</code>, must exist in this object.
+	 *            not {@code null}, must exist in this object.
 	 * @param newCategory
-	 *            not <code>null</code>.
-	 * @return <code>true</code> iff the state changed.
+	 *            not {@code null}.
+	 * @return {@code true} iff the state changed.
 	 */
 	private boolean replaceCategory(final Category currentCategory, Category newCategory) {
 		final Alternative previousProfile = currentCategory.getProfileDown();
@@ -909,8 +909,6 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 	}
 
 	/**
-	 *
-	 *
 	 * <ul>
 	 * <li>If new down profile is set, if previous profile is set, replace
 	 * current previous profile with new down profile, or if no current previous
@@ -927,39 +925,39 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 	 * </ul>
 	 *
 	 * @param newCategory
-	 *            not <code>null</code>, its name does not already exist in this
+	 *            not {@code null}, its name does not already exist in this
 	 *            object.
 	 * @param currentCategory
-	 *            <code>null</code> iff the new category does not replace any
+	 *            {@code null} iff the new category does not replace any
 	 *            other one but is an addition (in which case it must be at an
 	 *            end, i.e. at least one of preceding or following category must
-	 *            be <code>null</code>).
+	 *            be {@code null}).
 	 * @param previousProfile
-	 *            <code>null</code> iff no immediate previous profile; not equal
+	 *            {@code null} iff no immediate previous profile; not equal
 	 *            to nextProfile.
 	 * @param precedingProfile
 	 *            Preceding, following means possibly not immediate, i.e. first
-	 *            non null, preceding, following ( <code>null</code> iff new is
+	 *            non null, preceding, following ( {@code null} iff new is
 	 *            the first, last).
 	 * @param previousCategory
 	 *            Previous, next means immediate previous, next (
-	 *            <code>null</code> iff no immediate previous or next).
+	 *            {@code null} iff no immediate previous or next).
 	 * @param precedingCategory
 	 *            equals previousCategory if previousCategory is not
-	 *            <code>null</code>.
+	 *            {@code null}.
 	 * @param nextProfile
 	 *            Previous, next means immediate previous, next (
-	 *            <code>null</code> iff no immediate previous or next).
+	 *            {@code null} iff no immediate previous or next).
 	 * @param followingProfile
 	 *            Preceding, following means possibly not immediate, i.e. first
-	 *            non null, preceding, following ( <code>null</code> iff new is
+	 *            non null, preceding, following ( {@code null} iff new is
 	 *            the first, last).
 	 * @param nextCategory
 	 *            Previous, next means immediate previous, next (
-	 *            <code>null</code> iff no immediate previous or next).
+	 *            {@code null} iff no immediate previous or next).
 	 * @param followingCategory
-	 *            equals nextCategory if nextCategory is not <code>null</code>.
-	 * @return the new category just added. Not <code>null</code>.
+	 *            equals nextCategory if nextCategory is not {@code null}.
+	 * @return the new category just added. Not {@code null}.
 	 */
 	private Category set(Category newCategory, Category currentCategory, Alternative previousProfile,
 			Alternative precedingProfile, Category previousCategory, final Category precedingCategory,
@@ -1043,18 +1041,18 @@ public class CatsAndProfsImpl implements CatsAndProfs {
 
 	/**
 	 * @param newProfile
-	 *            not <code>null</code>.
+	 *            not {@code null}.
 	 * @param currentProfile
-	 *            may be <code>null</code>.
+	 *            may be {@code null}.
 	 * @param precedingProfile
-	 *            used only when currentProfile is <code>null</code>.
+	 *            used only when currentProfile is {@code null}.
 	 * @param followingProfile
-	 *            used only when currentProfile is <code>null</code>.
+	 *            used only when currentProfile is {@code null}.
 	 * @param previousCategory
-	 *            may be <code>null</code>.
+	 *            may be {@code null}.
 	 * @param nextCategory
-	 *            may be <code>null</code>.
-	 * @return <code>true</code> iff state changed.
+	 *            may be {@code null}.
+	 * @return {@code true} iff state changed.
 	 */
 	private boolean setProfile(final Alternative newProfile, final Alternative currentProfile,
 			Alternative precedingProfile, Alternative followingProfile, Category previousCategory,

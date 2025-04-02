@@ -19,7 +19,7 @@ public class AlternativeEvaluations {
     private Map<Criterion, Double> m_evaluations;
 
     /**
-     * @return the evaluations contained in this object. Not <code>null</code>. Can also be used to modify this object's
+     * @return the evaluations contained in this object. Not {@code null}. Can also be used to modify this object's
      *         evaluations.
      */
     public Map<Criterion, Double> getEvaluations() {
@@ -28,8 +28,8 @@ public class AlternativeEvaluations {
 
     /**
      * @param criterion
-     *            not <code>null</code>.
-     * @return <code>null</code> iff no evaluation is defined for that criterion (i.e. that criterion is not contained
+     *            not {@code null}.
+     * @return {@code null} iff no evaluation is defined for that criterion (i.e. that criterion is not contained
      *         in this object).
      */
     public Double getEvaluation(Criterion criterion) {
@@ -41,10 +41,10 @@ public class AlternativeEvaluations {
 
     /**
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param evaluation
-     *            <code>null</code> to remove the evaluation associated to the given criterion.
-     * @return the previous evaluation associated to this criterion, or <code>null</code> if there was none.
+     *            {@code null} to remove the evaluation associated to the given criterion.
+     * @return the previous evaluation associated to this criterion, or {@code null} if there was none.
      */
     public Double putEvaluation(Criterion criterion, Double evaluation) {
 	if (criterion == null) {
@@ -80,7 +80,7 @@ public class AlternativeEvaluations {
      * Iteration order of the given evaluations is kept: this is used in the {@link #toString()} method, for debug.
      * 
      * @param evaluations
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AlternativeEvaluations(Map<Criterion, Double> evaluations) {
 	if (evaluations == null) {
@@ -138,7 +138,7 @@ public class AlternativeEvaluations {
      *            must be evaluated on the same criteria set than this object.
      * @param directions
      *            must contain directions for every criteria used in the evaluations.
-     * @return <code>true</code> iff this object strictly dominates the given one.
+     * @return {@code true} iff this object strictly dominates the given one.
      */
     public boolean dominates(AlternativeEvaluations target, Map<Criterion, PreferenceDirection> directions) {
 	if (!target.getEvaluations().keySet().equals(m_evaluations.keySet())) {

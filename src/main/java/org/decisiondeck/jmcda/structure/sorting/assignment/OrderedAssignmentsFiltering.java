@@ -25,9 +25,9 @@ public class OrderedAssignmentsFiltering implements IOrderedAssignmentsRead {
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param predicate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsFiltering(IOrderedAssignmentsRead delegate, Predicate<Alternative> predicate) {
 	Preconditions.checkNotNull(delegate);
@@ -40,7 +40,7 @@ public class OrderedAssignmentsFiltering implements IOrderedAssignmentsRead {
      * Creates a read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsFiltering(IOrderedAssignmentsRead delegate) {
 	Preconditions.checkNotNull(delegate);

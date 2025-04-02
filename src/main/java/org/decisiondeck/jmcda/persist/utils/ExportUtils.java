@@ -26,9 +26,9 @@ public class ExportUtils {
      * the source. If some orders are not defined in the source, they end up being not defined either in the target.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     static public void copySettings(ExportSettings source, ExportSettings target) {
 	target.setAlternativesOrder(source.getAlternativesOrder());
@@ -103,8 +103,8 @@ public class ExportUtils {
      *            the input object type.
      * 
      * @param ints
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public <I> FunctionWithInputCheck<I, String> getInputToIntToStringFctWithInputCheck(Map<I, Integer> ints) {
 	return new InputToIntToString<I>(ints);
@@ -121,8 +121,8 @@ public class ExportUtils {
      * number of categories.
      * 
      * @param sortingData
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public FunctionWithInputCheck<Category, String> getCategoryRankFct(ISortingData sortingData) {
 	return new InputToIntToString<Category>(new SortingDataArray(sortingData).getCategoriesRanks());
@@ -139,8 +139,8 @@ public class ExportUtils {
      *            the input object type.
      * 
      * @param ints
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public <I> Function<I, String> getInputToIntToStringFct(Map<I, Integer> ints) {
 	final FunctionWithInputCheck<I, String> check = new InputToIntToString<I>(ints);
@@ -153,7 +153,7 @@ public class ExportUtils {
      * as it will be outdated.
      * 
      * @param source
-     *            not <code>null</code>. The profiles must all be ordered through the categories and profiles object.
+     *            not {@code null}. The profiles must all be ordered through the categories and profiles object.
      * @param countFrom
      *            the index to start counting from (typically zero or one). Applies to alternatives, profiles, criteria,
      *            categories.
@@ -191,7 +191,7 @@ public class ExportUtils {
      * as it will be outdated. The returned settings order on the decision makers is unspecified.
      * 
      * @param source
-     *            not <code>null</code>. The profiles must all be ordered through the categories and profiles object.
+     *            not {@code null}. The profiles must all be ordered through the categories and profiles object.
      * @return a settings object configured to export ids of the objects (i.e. alternatives, profiles, criteria,
      *         categories), ordered by their natural ordering, thus alphabetical order of their id, except categories
      *         and profiles which are ordered from worst (index 0) to best.
@@ -217,7 +217,7 @@ public class ExportUtils {
      * as it will be outdated.
      * 
      * @param source
-     *            not <code>null</code>. The profiles must all be ordered through the categories and profiles object.
+     *            not {@code null}. The profiles must all be ordered through the categories and profiles object.
      * @return a settings object configured to export indexes of the objects (i.e. alternatives, profiles, criteria,
      *         decision makers, categories), counting from zero, ordered by their natural ordering, thus alphabetical
      *         order of their id, except categories and profiles which are ordered from worst (index 0) to best.

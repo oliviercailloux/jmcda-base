@@ -17,7 +17,7 @@ public class EvaluationsView extends ForwardingSparseMatrixRead<Alternative, Cri
      * Builds a new evaluations view delegating to the given evaluations.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public EvaluationsView(SparseMatrixDRead<Alternative, Criterion> delegate) {
 	super(delegate);

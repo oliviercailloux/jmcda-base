@@ -33,8 +33,8 @@ public interface IOrderedAssignmentsWithCredibilitiesRead extends IAssignmentsWi
      * </p>
      * 
      * @param alternative
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given alternative is not assigned, otherwise, a map containing at least one
+     *            not {@code null}.
+     * @return {@code null} iff the given alternative is not assigned, otherwise, a map containing at least one
      *         entry.
      */
     @Override
@@ -42,14 +42,14 @@ public interface IOrderedAssignmentsWithCredibilitiesRead extends IAssignmentsWi
 
     /**
      * <p>
-     * Indicates whether the given object is equal to this one. This is <code>true</code> iff the given object is a
+     * Indicates whether the given object is equal to this one. This is {@code true} iff the given object is a
      * IOrderedAssignmentsWithCredibilitiesRead, contains the same alternatives assigned to the same categories with the
      * same credibilities, and contains the same set of overall categories as this object in the same order.
      * </p>
      * 
      * @param obj
-     *            may be <code>null</code>.
-     * @return <code>true</code> iff both objects are considered equal.
+     *            may be {@code null}.
+     * @return {@code true} iff both objects are considered equal.
      */
     @Override
     public boolean equals(Object obj);

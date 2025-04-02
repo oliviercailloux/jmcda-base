@@ -10,7 +10,7 @@ import org.decision_deck.jmcda.structure.Criterion;
  * of weights is normalized, and to retrieve the equivalent set after normalization.
  * </p>
  * <p>
- * This map never contains <code>null</code> key or values.
+ * This map never contains {@code null} key or values.
  * </p>
  * 
  * @author Olivier Cailloux
@@ -67,7 +67,7 @@ public interface Weights extends Map<Criterion, Double> {
      * the key set of this map.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a number greater than or equal to zero.
      * @see #keySet()
      */
@@ -75,14 +75,14 @@ public interface Weights extends Map<Criterion, Double> {
 
     /**
      * Associates the given weight to the given criterion. This method is equivalent to the
-     * {@link #put(Criterion, Double)} method, but this one makes it clear that <code>null</code> values are not
+     * {@link #put(Criterion, Double)} method, but this one makes it clear that {@code null} values are not
      * accepted.
      * 
      * @param criterion
-     *            the criterion to consider. Not <code>null</code>.
+     *            the criterion to consider. Not {@code null}.
      * @param weight
      *            the weight to associate to the given criterion.
-     * @return the weight that was previously associated to that criterion, or <code>null</code> if there was no.
+     * @return the weight that was previously associated to that criterion, or {@code null} if there was no.
      * @see #put(Criterion, Double)
      */
     public Double putWeight(Criterion criterion, double weight);

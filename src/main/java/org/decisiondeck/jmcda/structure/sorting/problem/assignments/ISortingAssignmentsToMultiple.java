@@ -44,13 +44,13 @@ public interface ISortingAssignmentsToMultiple extends ISortingAssignmentsToMult
      * superset of the assigned alternatives.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public IOrderedAssignmentsToMultiple getAssignments();
 
     /**
-     * @return <code>true</code> iff all alternatives contained in this object are assigned.
+     * @return {@code true} iff all alternatives contained in this object are assigned.
      */
     @Override
     public boolean hasCompleteAssignments();
@@ -71,7 +71,7 @@ public interface ISortingAssignmentsToMultiple extends ISortingAssignmentsToMult
      * subset of the categories defined in this object.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public CatsAndProfs getCatsAndProfs();

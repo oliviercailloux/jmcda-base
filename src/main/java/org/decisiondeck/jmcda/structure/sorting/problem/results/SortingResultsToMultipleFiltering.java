@@ -30,7 +30,7 @@ public class SortingResultsToMultipleFiltering extends SortingPreferencesForward
      * Creates a new read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingResultsToMultipleFiltering(ISortingResultsToMultiple delegate) {
 	super(new SortingPreferencesFiltering(delegate));
@@ -44,7 +44,7 @@ public class SortingResultsToMultipleFiltering extends SortingPreferencesForward
      * Creates a new read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
    public SortingResultsToMultipleFiltering(ISortingResults delegate) {
 	super(new SortingPreferencesFiltering(delegate));
@@ -55,12 +55,12 @@ public class SortingResultsToMultipleFiltering extends SortingPreferencesForward
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alsoRestrictAssignments
-     *            <code>true</code> to apply the restriction to the assignments contained in this object. Set this to
-     *            <code>false</code> if the predicate uses the assignments to determine if an alternative is filtered,
+     *            {@code true} to apply the restriction to the assignments contained in this object. Set this to
+     *            {@code false} if the predicate uses the assignments to determine if an alternative is filtered,
      *            otherwize an infinite recursion will occur (filter defined according to the assignments which require
      *            the filter to be determined).
      */
@@ -75,12 +75,12 @@ public class SortingResultsToMultipleFiltering extends SortingPreferencesForward
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alsoRestrictAssignments
-     *            <code>true</code> to apply the restriction to the assignments contained in this object. Set this to
-     *            <code>false</code> if the predicate uses the assignments to determine if an alternative is filtered,
+     *            {@code true} to apply the restriction to the assignments contained in this object. Set this to
+     *            {@code false} if the predicate uses the assignments to determine if an alternative is filtered,
      *            otherwize an infinite recursion will occur (filter defined according to the assignments which require
      *            the filter to be determined).
      */
@@ -131,7 +131,7 @@ public class SortingResultsToMultipleFiltering extends SortingPreferencesForward
     }
 
     /**
-     * @return <code>null</code> for allow everything.
+     * @return {@code null} for allow everything.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesPredicate();

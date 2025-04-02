@@ -41,10 +41,10 @@ public class WeightsUtils {
      * </p>
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param rename
-     *            not <code>null</code>, no <code>null</code> key or values.
-     * @return not <code>null</code>.
+     *            not {@code null}, no {@code null} key or values.
+     * @return not {@code null}.
      */
     static public Weights newRenameAndReorder(Weights source, Function<? super Criterion, Criterion> rename,
 	    Comparator<? super Criterion> newOrder) {
@@ -78,10 +78,10 @@ public class WeightsUtils {
      * 
      * @deprecated The other one is more general.
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param rename
-     *            not <code>null</code>, no <code>null</code> key or values.
-     * @return not <code>null</code>.
+     *            not {@code null}, no {@code null} key or values.
+     * @return not {@code null}.
      */
     @Deprecated
     static public Weights newRenameAndReorder(Weights source, Map<Criterion, Criterion> rename) {

@@ -22,7 +22,7 @@ public class SortingAssignmentsToMultipleFiltering extends SortingDataForwarder 
      * Creates a read-only view of the given data.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public SortingAssignmentsToMultipleFiltering(ISortingAssignmentsToMultiple delegate) {
 	this(delegate, Predicates.<Alternative> alwaysTrue(), false);
@@ -34,12 +34,12 @@ public class SortingAssignmentsToMultipleFiltering extends SortingDataForwarder 
      * untouched. To filter a constant set of alternatives, use {@link Predicates#in(java.util.Collection)}.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param alsoFilterAssignments
-     *            <code>true</code> to apply the filter to the assignments contained in this object. Set this to
-     *            <code>false</code> if the predicate uses the assignments to determine if an alternative is filtered,
+     *            {@code true} to apply the filter to the assignments contained in this object. Set this to
+     *            {@code false} if the predicate uses the assignments to determine if an alternative is filtered,
      *            otherwize an infinite recursion will occur (filter defined according to the assignments which require
      *            the filter to be determined).
      */
@@ -58,7 +58,7 @@ public class SortingAssignmentsToMultipleFiltering extends SortingDataForwarder 
     }
 
     /**
-     * @return <code>null</code> for everything allowed.
+     * @return {@code null} for everything allowed.
      */
     public Predicate<Alternative> getAlternativesFilter() {
 	return delegate().getAlternativesPredicate();

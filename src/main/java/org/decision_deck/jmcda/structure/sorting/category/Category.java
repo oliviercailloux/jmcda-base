@@ -49,11 +49,11 @@ public class Category {
 
     /**
      * @param id
-     *            not <code>null</code>, not empty.
+     *            not {@code null}, not empty.
      * @param profileDown
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      * @param profileUp
-     *            may be <code>null</code>.
+     *            may be {@code null}.
      */
     public Category(String id, Alternative profileDown, Alternative profileUp) {
 	if (id == null || id.isEmpty()) {
@@ -68,7 +68,7 @@ public class Category {
      * Creates a category with no profiles down or up.
      * 
      * @param id
-     *            not <code>null</code>, not empty.
+     *            not {@code null}, not empty.
      */
     public Category(String id) {
 	if (id == null || id.isEmpty()) {
@@ -95,7 +95,7 @@ public class Category {
      * Creates a new category containing the same informations as this one except a different down profile.
      * 
      * @param profileDown
-     *            <code>null</code> for no down profile.
+     *            {@code null} for no down profile.
      * @return a new category.
      */
     public Category newProfileDown(Alternative profileDown) {
@@ -106,7 +106,7 @@ public class Category {
      * Creates a new category containing the same informations as this one except a different up profile.
      * 
      * @param profileUp
-     *            <code>null</code> for no up profile.
+     *            {@code null} for no up profile.
      * @return a new category.
      */
     public Category newProfileUp(Alternative profileUp) {
@@ -117,7 +117,7 @@ public class Category {
      * Creates a new category containing the same informations as this one except a new id.
      * 
      * @param id
-     *            not <code>null</code>, not empty (after trimming).
+     *            not {@code null}, not empty (after trimming).
      * @return a new category.
      */
     public Category newId(String id) {
@@ -126,8 +126,8 @@ public class Category {
 
     /**
      * @param c2
-     *            may be <code>null</code>.
-     * @return <code>true</code> iff the given category is equal to this object and has the same profiles (down and up).
+     *            may be {@code null}.
+     * @return {@code true} iff the given category is equal to this object and has the same profiles (down and up).
      */
     public boolean identicalTo(Category c2) {
 	if (this == c2) {

@@ -11,8 +11,8 @@ public class NulWeights {
     /**
      * Must have at least one weight and lambda set. TODO remove from here.
      * 
-     * @return <code>true</code> iff at least one weight is semantically nul, i.e. does not take part in any winning
-     *         coalition except the total one. If <code>true</code>, at least the smallest weight is nul.
+     * @return {@code true} iff at least one weight is semantically nul, i.e. does not take part in any winning
+     *         coalition except the total one. If {@code true}, at least the smallest weight is nul.
      */
     public boolean hasNulWeight(Coalitions coalitions) {
 	/**

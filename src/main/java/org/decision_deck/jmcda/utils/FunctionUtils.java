@@ -51,8 +51,8 @@ public class FunctionUtils {
      * @param <V2>
      *            the codomain of the returned function: the type of value it returns.
      * @param f
-     *            not <code>null</code>.
-     * @return not <code>null</code>.
+     *            not {@code null}.
+     * @return not {@code null}.
      */
     static public <F, F2 extends F, V2, V extends V2> FunctionWithInputCheck<F2, V2> functionWithInputCheck(
 	    final Function<F, V> f) {

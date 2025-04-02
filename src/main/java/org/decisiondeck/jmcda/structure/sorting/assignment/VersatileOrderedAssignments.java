@@ -46,17 +46,17 @@ public class VersatileOrderedAssignments {
     private int m_nbMultiCatsAlts;
     /**
      * For each category where at least one alternative is assigned, the alternatives assigned there. No
-     * <code>null</code> values or key.
+     * {@code null} values or key.
      */
     private final SetMultimap<Category, Alternative> m_alternatives = HashMultimap.create();
     /**
-     * <code>null</code> iff not set. The content of the set is never changed, the full set is replaced with a new one
+     * {@code null} iff not set. The content of the set is never changed, the full set is replaced with a new one
      * when needed.
      */
     private NavigableSet<Category> m_categories;
     /**
-     * No <code>null</code> key, no <code>null</code> value. The map values each have at least one entry (Cat, Double),
-     * themselves being without <code>null</code> key and value and having positive values. The contents of the maps as
+     * No {@code null} key, no {@code null} value. The map values each have at least one entry (Cat, Double),
+     * themselves being without {@code null} key and value and having positive values. The contents of the maps as
      * values never change, they are replaced when an update is needed.
      */
     private final Map<Alternative, NavigableMap<Category, Double>> m_credibilitiesSorted = Maps.newLinkedHashMap();
@@ -71,7 +71,7 @@ public class VersatileOrderedAssignments {
      * Copy constructor by value.
      * 
      * @param copy
-     *            not <code>null</code>. The source data to be copied into this object.
+     *            not {@code null}. The source data to be copied into this object.
      */
     public VersatileOrderedAssignments(VersatileOrderedAssignments copy) {
 
@@ -134,8 +134,8 @@ public class VersatileOrderedAssignments {
     }
 
     /**
-     * @return <code>true</code> iff every assigned alternatives are assigned to exactly one category (thus with a
-     *         credibility degree of one). Returns <code>false</code> iff at least one alternative is assigned to more
+     * @return {@code true} iff every assigned alternatives are assigned to exactly one category (thus with a
+     *         credibility degree of one). Returns {@code false} iff at least one alternative is assigned to more
      *         than one category.
      */
     public boolean isCrisp() {
@@ -149,13 +149,13 @@ public class VersatileOrderedAssignments {
      * corresponding category.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param credibilities
-     *            <code>null</code> or empty to assign the alternative to no category, i.e., to remove the assignment of
-     *            the given alternative. The map entries may not contain a <code>null</code> key or value, the values
+     *            {@code null} or empty to assign the alternative to no category, i.e., to remove the assignment of
+     *            the given alternative. The map entries may not contain a {@code null} key or value, the values
      *            must be positive or zero, the categories must be contained in {@link #getCategories()}. If the map
      *            contains only zeroes, it is considered empty.
-     * @return <code>true</code> iff the call changed the assignments, i.e., iff the assignment existed and has been
+     * @return {@code true} iff the call changed the assignments, i.e., iff the assignment existed and has been
      *         removed, or existed and has changed (be it a change in some credibility degrees or a change of category),
      *         or did not exist and has been added.
      */
@@ -244,12 +244,12 @@ public class VersatileOrderedAssignments {
      * </p>
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param categories
-     *            <code>null</code> or empty to assign the alternative to no category, i.e., to remove the assignment of
+     *            {@code null} or empty to assign the alternative to no category, i.e., to remove the assignment of
      *            the given alternative. Otherwise, must be a subset of the categories returned by
      *            {@link #getCategories()}.
-     * @return <code>true</code> iff the call changed the assignments, i.e. true iff the given alternative was assigned
+     * @return {@code true} iff the call changed the assignments, i.e. true iff the given alternative was assigned
      *         and the assignment has been removed, or was assigned to a not identical set of categories, or was not
      *         assigned and has been.
      */
@@ -311,10 +311,10 @@ public class VersatileOrderedAssignments {
      * {@link #getCategoriesSorted()} would not be a superset of the used categories any more.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param category
-     *            <code>null</code> to remove the assignment.
-     * @return <code>true</code> iff the call changed the assignments, i.e. <code>true</code> iff the given alternative
+     *            {@code null} to remove the assignment.
+     * @return {@code true} iff the call changed the assignments, i.e. {@code true} iff the given alternative
      *         was assigned and the assignment has been removed, or was assigned to a different category, or was not
      *         assigned and has been assigned to a category.
      */
@@ -340,8 +340,8 @@ public class VersatileOrderedAssignments {
      * </p>
      * 
      * @param alternative
-     *            not <code>null</code>.
-     * @return the category to which this alternative is assigned, or <code>null</code> iff this alternative is not
+     *            not {@code null}.
+     * @return the category to which this alternative is assigned, or {@code null} iff this alternative is not
      *         assigned.
      */
     public Category getCategory(Alternative alternative) {

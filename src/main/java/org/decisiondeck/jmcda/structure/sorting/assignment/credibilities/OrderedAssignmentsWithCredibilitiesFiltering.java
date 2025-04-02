@@ -26,9 +26,9 @@ public class OrderedAssignmentsWithCredibilitiesFiltering implements IOrderedAss
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsWithCredibilitiesFiltering(IOrderedAssignmentsWithCredibilities delegate,
 	    Predicate<Alternative> filterAlternatives) {
@@ -42,7 +42,7 @@ public class OrderedAssignmentsWithCredibilitiesFiltering implements IOrderedAss
      * Creates a new read-only view of the given delegate.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsWithCredibilitiesFiltering(IOrderedAssignmentsWithCredibilities delegate) {
 	Preconditions.checkNotNull(delegate);

@@ -24,7 +24,7 @@ public class CoalitionsImpl implements Coalitions {
      * conversely.
      * 
      * @param weights
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param majorityThreshold
      *            a number greater than or equal to zero.
      */
@@ -42,7 +42,7 @@ public class CoalitionsImpl implements Coalitions {
      * conversely.
      * 
      * @param weights
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     CoalitionsImpl(Weights weights) {
 	checkNotNull(weights);
@@ -65,7 +65,7 @@ public class CoalitionsImpl implements Coalitions {
     }
 
     /**
-     * Never an infinite or NaN value. When not set, is <code>null</code>.
+     * Never an infinite or NaN value. When not set, is {@code null}.
      */
     private Double m_lambda;
 
@@ -111,7 +111,7 @@ public class CoalitionsImpl implements Coalitions {
      * TODO remove and replace with set and with remove.
      * 
      * @param majorityThreshold
-     *            a valid value (not infinite or NaN). To unset the value, set it to <code>null</code>.
+     *            a valid value (not infinite or NaN). To unset the value, set it to {@code null}.
      */
     public void setMajorityThresholdOld(Double majorityThreshold) {
 	if (majorityThreshold != null

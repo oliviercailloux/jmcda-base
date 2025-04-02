@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
  * values when needed, and to not maintain them up to date unneedlessly.
  * </p>
  * <p>
- * The <code>null</code> key is not allowed, no <code>null</code> values are allowed.
+ * The {@code null} key is not allowed, no {@code null} values are allowed.
  * </p>
  * 
  * @author Olivier Cailloux
@@ -49,22 +49,22 @@ public class SharedDirector<K, V> {
     public interface CopyContents<T> {
 	/**
 	 * @param source
-	 *            not <code>null</code>.
+	 *            not {@code null}.
 	 * @param target
-	 *            not <code>null</code>, the object whose contents must be replaced.
-	 * @return <code>true</code> iff the destination object changed, i.e. iff it was not equal to the source object.
+	 *            not {@code null}, the object whose contents must be replaced.
+	 * @return {@code true} iff the destination object changed, i.e. iff it was not equal to the source object.
 	 */
 	public boolean copyContents(T source, T target);
     }
 
     /**
-     * A <code>null</code> value means that the value is equal to the shared value (or to an empty value before shared
+     * A {@code null} value means that the value is equal to the shared value (or to an empty value before shared
      * is initialized).
      */
     private final Map<K, V> m_map = new LinkedHashMap<K, V>();
 
     /**
-     * Is lazy-initialized. If <code>null</code>, nobody cares about the shared value and it must thus not be kept up to
+     * Is lazy-initialized. If {@code null}, nobody cares about the shared value and it must thus not be kept up to
      * date. If non empty, the values are shared. If empty, either all values are empty, or the values are not shared.
      */
     private V m_shared;
@@ -78,16 +78,16 @@ public class SharedDirector<K, V> {
 
     /**
      * @param factory
-     *            a factory which gives a deep copy of any value. When given <code>null</code>, the factory must return
-     *            a new empty value. It may never return <code>null</code>. Not <code>null</code>.
+     *            a factory which gives a deep copy of any value. When given {@code null}, the factory must return
+     *            a new empty value. It may never return {@code null}. Not {@code null}.
      * @param copier
-     *            a function to copy a source content into a target object. Not <code>null</code>.
+     *            a function to copy a source content into a target object. Not {@code null}.
      * @param emptier
-     *            a modifier able to empty any given value. The modifier is never given a <code>null</code> value. Not
-     *            <code>null</code>.
+     *            a modifier able to empty any given value. The modifier is never given a {@code null} value. Not
+     *            {@code null}.
      * @param isEmpty
      *            a predicate able to tell whether a given value is in the empty state. The predicate is never given a
-     *            <code>null</code> value. Not <code>null</code>.
+     *            {@code null} value. Not {@code null}.
      */
     public SharedDirector(Function<V, V> factory, CopyContents<V> copier, Modifier<V> emptier, Predicate<V> isEmpty) {
 	if (factory == null || copier == null || emptier == null || isEmpty == null) {
@@ -106,8 +106,8 @@ public class SharedDirector<K, V> {
      * Conversely, modifications in this value through this object is reflected in the returned object.
      * 
      * @param key
-     *            not <code>null</code>.
-     * @return the value associated with the given key, or <code>null</code> if there is no such key.
+     *            not {@code null}.
+     * @return the value associated with the given key, or {@code null} if there is no such key.
      */
     public V get(K key) {
 	if (!m_map.containsKey(key)) {
@@ -123,7 +123,7 @@ public class SharedDirector<K, V> {
      * by its value when the method {@link #updateShared()} is called. It is mandatory to call the method
      * {@link #updateShared()} after updating, otherwise the state is inconsistent.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public V getShared() {
 	if (m_shared == null) {
@@ -138,10 +138,10 @@ public class SharedDirector<K, V> {
     }
 
     /**
-     * Interprets <code>null</code> values as meaning empty values.
+     * Interprets {@code null} values as meaning empty values.
      * 
-     * @return the value that is equal to all values in this object, or <code>null</code> if not all values are equal.
-     *         May also be <code>null</code> for empty.
+     * @return the value that is equal to all values in this object, or {@code null} if not all values are equal.
+     *         May also be {@code null} for empty.
      */
     private V getUniqueValue() {
 	final V model;
@@ -210,18 +210,18 @@ public class SharedDirector<K, V> {
      * </p>
      * 
      * @param key
-     *            not <code>null</code>. A new or already existing key.
+     *            not {@code null}. A new or already existing key.
      * @param value
-     *            not <code>null</code>. If the given key already exists in this object, this value must equal the value
+     *            not {@code null}. If the given key already exists in this object, this value must equal the value
      *            currently associated with the key.
      * @param sameAsShared
-     *            an optional hint to improve performance. If the value is not <code>null</code>, and if the values are
+     *            an optional hint to improve performance. If the value is not {@code null}, and if the values are
      *            shared before this method is called, it indicates whether the given value is the same as the currently
-     *            shared value. If <code>true</code>, it implies that if the values are shared before this method is
-     *            called, it will still be after this method returns. If <code>false</code>, they will still be shared
+     *            shared value. If {@code true}, it implies that if the values are shared before this method is
+     *            called, it will still be after this method returns. If {@code false}, they will still be shared
      *            after this method returns iff this object contains exactly one key. If the values are not shared
      *            before this method is called, this parameter has no effect. Note that if that parameter is set to
-     *            <code>true</code>, this method has the same effect than {@link #putShared(Object)}.
+     *            {@code true}, this method has the same effect than {@link #putShared(Object)}.
      */
     public void put(K key, V value, Boolean sameAsShared) {
 	if (key == null || value == null) {
@@ -286,7 +286,7 @@ public class SharedDirector<K, V> {
      * </p>
      * 
      * @param key
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public void putShared(K key) {
 	if (key == null) {
@@ -310,8 +310,8 @@ public class SharedDirector<K, V> {
      * </p>
      * 
      * @param key
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the state of this object changed as a result of this call, i.e. <code>true</code>
+     *            not {@code null}.
+     * @return {@code true} iff the state of this object changed as a result of this call, i.e. {@code true}
      *         iff there was no value or a non empty value associated with the given key.
      */
     public boolean putEmpty(K key) {
@@ -347,9 +347,9 @@ public class SharedDirector<K, V> {
      * value bound to this object.
      * 
      * @param key
-     *            not <code>null</code>, must exist in this object.
+     *            not {@code null}, must exist in this object.
      * @param keepShared
-     *            <code>true</code> to keep the value as a shared value if it is the last one in this object. If there
+     *            {@code true} to keep the value as a shared value if it is the last one in this object. If there
      *            is more than one value left in this object, this parameter has no effect.
      */
     public void remove(K key, boolean keepShared) {
@@ -420,14 +420,14 @@ public class SharedDirector<K, V> {
      * Applies a modification to all values stored in this object.
      * 
      * @param modifier
-     *            the modification to apply. No <code>null</code> value is given to the modifier. Not <code>null</code>.
+     *            the modification to apply. No {@code null} value is given to the modifier. Not {@code null}.
      * @param applyToEmpty
-     *            an optimization hint. If <code>false</code>, the modification has no effect on empty objects and must
+     *            an optimization hint. If {@code false}, the modification has no effect on empty objects and must
      *            not necessarily be applied to it. Note that this object does not guarantee that the modifier is never
-     *            called on an empty object, this is only used for optimization when useful. Set it to <code>true</code>
+     *            called on an empty object, this is only used for optimization when useful. Set it to {@code true}
      *            to force this object to apply the modifier to empty objects as well.
-     * @return <code>true</code> iff the state of this object has changed as a result of this method call, thus
-     *         <code>true</code> iff the modifier returned <code>true</code> to one of the modifications calls.
+     * @return {@code true} iff the state of this object has changed as a result of this method call, thus
+     *         {@code true} iff the modifier returned {@code true} to one of the modifications calls.
      */
     public boolean applyToAll(Modifier<V> modifier, boolean applyToEmpty) {
 	if (modifier == null) {
@@ -476,8 +476,8 @@ public class SharedDirector<K, V> {
      * </p>
      * 
      * @param key
-     *            not <code>null</code>.
-     * @return the value associated with the given key, or <code>null</code> if there is no such key or if the value is
+     *            not {@code null}.
+     * @return the value associated with the given key, or {@code null} if there is no such key or if the value is
      *         empty.
      */
     public V getNonEmpty(K key) {

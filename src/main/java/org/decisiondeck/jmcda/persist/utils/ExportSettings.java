@@ -33,20 +33,20 @@ public class ExportSettings {
 
     private Set<Alternative> m_profilesOrder;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private Function<Alternative, String> m_profilesToString;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private Function<Criterion, String> m_criteriaToString;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private Function<DecisionMaker, String> m_dmsToString;
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Function<DecisionMaker, String> getDmsToString() {
 	return m_dmsToString;
@@ -66,7 +66,7 @@ public class ExportSettings {
     }
 
     /**
-     * @return <code>null</code> if no order set.
+     * @return {@code null} if no order set.
      */
     public Set<Alternative> getProfilesOrder() {
 	return m_profilesOrder;
@@ -88,14 +88,14 @@ public class ExportSettings {
     }
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Function<Category, String> getCategoriesToString() {
 	return m_categoriesToString;
     }
 
     /**
-     * @return <code>null</code> if no order set.
+     * @return {@code null} if no order set.
      */
     public Set<Criterion> getCriteriaOrder() {
 	return m_criteriaOrder;
@@ -104,21 +104,21 @@ public class ExportSettings {
     private Set<Criterion> m_criteriaOrder;
     private Set<DecisionMaker> m_dmsOrder;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private NumberFormat m_numberFormatter;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private Function<Category, String> m_categoriesToString;
     private Set<Alternative> m_alternativesOrder;
     /**
-     * Never <code>null</code>.
+     * Never {@code null}.
      */
     private Function<Alternative, String> m_alternativesToString;
 
     /**
-     * @return <code>null</code> if no order set.
+     * @return {@code null} if no order set.
      */
     public Set<DecisionMaker> getDmsOrder() {
 	return m_dmsOrder;
@@ -126,14 +126,14 @@ public class ExportSettings {
 
     /**
      * @param dmsOrder
-     *            <code>null</code> for no order set.
+     *            {@code null} for no order set.
      */
     public void setDmsOrder(Collection<DecisionMaker> dmsOrder) {
 	m_dmsOrder = dmsOrder == null ? null : ExtentionalTotalOrder.create(dmsOrder);
     }
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Function<Alternative, String> getProfilesToString() {
 	return m_profilesToString;
@@ -155,7 +155,7 @@ public class ExportSettings {
 
     /**
      * @param profilesOrder
-     *            <code>null</code> for no order set.
+     *            {@code null} for no order set.
      */
     public void setProfilesOrder(Collection<Alternative> profilesOrder) {
 	m_profilesOrder = profilesOrder == null ? null : ExtentionalTotalOrder.create(profilesOrder);
@@ -189,7 +189,7 @@ public class ExportSettings {
 
     /**
      * @param criteriaOrder
-     *            <code>null</code> for no order set.
+     *            {@code null} for no order set.
      */
     public void setCriteriaOrder(Collection<Criterion> criteriaOrder) {
 	m_criteriaOrder = criteriaOrder == null ? null : ExtentionalTotalOrder.create(criteriaOrder);
@@ -203,7 +203,7 @@ public class ExportSettings {
     }
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public NumberFormat getNumberFormatter() {
 	return m_numberFormatter;
@@ -226,7 +226,7 @@ public class ExportSettings {
     }
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Function<Criterion, String> getCriteriaToString() {
 	return m_criteriaToString;
@@ -246,14 +246,14 @@ public class ExportSettings {
     }
 
     /**
-     * @return <code>null</code> if no order set.
+     * @return {@code null} if no order set.
      */
     public Set<Alternative> getAlternativesOrder() {
 	return m_alternativesOrder;
     }
 
     /**
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Function<Alternative, String> getAlternativesToString() {
 	return m_alternativesToString;
@@ -261,7 +261,7 @@ public class ExportSettings {
 
     /**
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing the given object, according to the function set in this exporter settings.
      */
     public String getAlternativeString(Alternative alternative) {
@@ -271,7 +271,7 @@ public class ExportSettings {
 
     /**
      * @param profile
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing the given object, according to the function set in this exporter settings.
      */
     public String getProfileString(Alternative profile) {
@@ -281,7 +281,7 @@ public class ExportSettings {
 
     /**
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing the given object, according to the function set in this exporter settings.
      */
     public String getCriterionString(Criterion criterion) {
@@ -291,7 +291,7 @@ public class ExportSettings {
 
     /**
      * @param category
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing the given object, according to the function set in this exporter settings.
      */
     public String getCategoryString(Category category) {
@@ -301,7 +301,7 @@ public class ExportSettings {
 
     /**
      * @param dm
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a string describing the given object, according to the function set in this exporter settings.
      */
     public String getDmString(DecisionMaker dm) {
@@ -318,7 +318,7 @@ public class ExportSettings {
 
     /**
      * @param alternativesOrder
-     *            <code>null</code> for no order set.
+     *            {@code null} for no order set.
      */
     public void setAlternativesOrder(Collection<Alternative> alternativesOrder) {
 	m_alternativesOrder = alternativesOrder == null ? null : ExtentionalTotalOrder.create(alternativesOrder);

@@ -28,7 +28,7 @@ public interface Thresholds {
      * Retrieves a view of the set of criteria contained in this object, i.e., each criterion to which at least one
      * threshold value is bound.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Criterion> getCriteria();
 
@@ -38,7 +38,7 @@ public interface Thresholds {
      * Retrieves the veto threshold that has been set for the given criterion. The criterion must have a veto threshold.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return the value of the threshold.
      * @see #containsVetoThreshold(Criterion)
      */
@@ -50,35 +50,35 @@ public interface Thresholds {
      * Binds a threshold to the given criterion.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param threshold
      *            a real number.
-     * @return the value of the threshold that was previously bound to the given criterion, or <code>null</code> iff
+     * @return the value of the threshold that was previously bound to the given criterion, or {@code null} iff
      *         there was no such threshold for this criterion.
      */
     public Double setPreferenceThreshold(Criterion criterion, double threshold);
 
     /**
      * Retrieves a view of the veto thresholds. The view is read-only iff this object is read-only. Setting the returned
-     * map has the same effect as setting this object. The map does not accept <code>null</code> key or value.
+     * map has the same effect as setting this object. The map does not accept {@code null} key or value.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Map<Criterion, Double> getVetoThresholds();
 
     /**
      * Retrieves a view of the indifference thresholds. The view is read-only iff this object is read-only. Setting the
-     * returned map has the same effect as setting this object. The map does not accept <code>null</code> key or value.
+     * returned map has the same effect as setting this object. The map does not accept {@code null} key or value.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Map<Criterion, Double> getIndifferenceThresholds();
 
     /**
      * Retrieves a view of the preference thresholds. The view is read-only iff this object is read-only. Setting the
-     * returned map has the same effect as setting this object. The map does not accept <code>null</code> key or value.
+     * returned map has the same effect as setting this object. The map does not accept {@code null} key or value.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Map<Criterion, Double> getPreferenceThresholds();
 
@@ -91,7 +91,7 @@ public interface Thresholds {
      * indifference threshold.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return the value of the threshold.
      * @see #containsIndifferenceThreshold(Criterion)
      */
@@ -102,7 +102,7 @@ public interface Thresholds {
      * preference threshold.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return the value of the threshold.
      * @see #containsPreferenceThreshold(Criterion)
      */
@@ -112,10 +112,10 @@ public interface Thresholds {
      * Binds a threshold to the given criterion.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param threshold
      *            a real number.
-     * @return the value of the threshold that was previously bound to the given criterion, or <code>null</code> iff
+     * @return the value of the threshold that was previously bound to the given criterion, or {@code null} iff
      *         there was no such threshold for this criterion.
      */
     public Double setIndifferenceThreshold(Criterion criterion, double threshold);
@@ -125,10 +125,10 @@ public interface Thresholds {
      * Binds a threshold to the given criterion.
      * 
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param threshold
      *            a real number.
-     * @return the value of the threshold that was previously bound to the given criterion, or <code>null</code> iff
+     * @return the value of the threshold that was previously bound to the given criterion, or {@code null} iff
      *         there was no such threshold for this criterion.
      */
     public Double setVetoThreshold(Criterion criterion, double threshold);

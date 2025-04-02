@@ -156,10 +156,10 @@ public class SharedCoalitions extends AbstractSharedDecisionMakerPreferences<Coa
 
     /**
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param target
-     *            not <code>null</code>.
-     * @return <code>true</code> iff the call changed the state of the target object.
+     *            not {@code null}.
+     * @return {@code true} iff the call changed the state of the target object.
      */
     static private boolean merge(Coalitions source, Coalitions target) {
 	checkNotNull(source);

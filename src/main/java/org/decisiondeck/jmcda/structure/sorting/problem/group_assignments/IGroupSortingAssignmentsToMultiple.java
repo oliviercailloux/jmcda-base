@@ -63,7 +63,7 @@ public interface IGroupSortingAssignmentsToMultiple extends IGroupSortingAssignm
      * {@link #getCatsAndProfs()}.
      * </p>
      * 
-     * @return not <code>null</code>. No <code>null</code> key, no <code>null</code> values.
+     * @return not {@code null}. No {@code null} key, no {@code null} values.
      */
     @Override
     public Map<DecisionMaker, IOrderedAssignmentsToMultiple> getAssignments();
@@ -93,15 +93,15 @@ public interface IGroupSortingAssignmentsToMultiple extends IGroupSortingAssignm
      * </p>
      * 
      * @param dm
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the given decision maker is not in the set of decision makers returned by
+     *            not {@code null}.
+     * @return {@code null} iff the given decision maker is not in the set of decision makers returned by
      *         {@link #getDms()}.
      */
     @Override
     public IOrderedAssignmentsToMultiple getAssignments(DecisionMaker dm);
 
     /**
-     * @return <code>true</code> iff all alternatives contained in this object have been assigned by all the decision
+     * @return {@code true} iff all alternatives contained in this object have been assigned by all the decision
      *         makers.
      */
     @Override
@@ -123,7 +123,7 @@ public interface IGroupSortingAssignmentsToMultiple extends IGroupSortingAssignm
      * assignments, as these may use a subset of categories that this object uses.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public CatsAndProfs getCatsAndProfs();

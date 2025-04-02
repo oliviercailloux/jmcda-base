@@ -19,7 +19,7 @@ import org.decisiondeck.jmcda.structure.sorting.assignment.credibilities.IAssign
  * implement {@link IAssignmentsWithCredibilitiesRead} never equals an object implementing
  * {@link IAssignmentsWithCredibilitiesRead}: as the latter adds a capability, the notion of equality changes. For
  * equality to remain symmetric, objects implementing this interface must treat specifically the case where they are
- * tested for equality against an object with credibilities: the equality test must return <code>false</code> in that
+ * tested for equality against an object with credibilities: the equality test must return {@code false} in that
  * case. The same remark applies for objects implementing {@link IOrderedAssignmentsToMultipleRead}: the ordering adds a
  * capability which is taken into account in the equality check, thus an object without ordering is defined to never
  * equal an object with ordering. See Joshua Bloch, <a href="http://java.sun.com/docs/books/effective/">Effective Java
@@ -34,7 +34,7 @@ public interface IAssignmentsToMultipleRead {
     /**
      * Retrieves a read-only view of the assigned alternatives.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Alternative> getAlternatives();
 
@@ -42,7 +42,7 @@ public interface IAssignmentsToMultipleRead {
      * <p>
      * Indicates whether the given object is equal to this one. Supposing this object does not implement
      * {@link IAssignmentsWithCredibilitiesRead} nor {@link IOrderedAssignmentsToMultipleRead}, this is
-     * <code>true</code> iff the given object is a IAssignmentsToMultipleRead, does not implement any of these mentioned
+     * {@code true} iff the given object is a IAssignmentsToMultipleRead, does not implement any of these mentioned
      * interfaces either, and contains the same alternatives assigned to the same categories and the same set of overall
      * categories as this object.
      * </p>
@@ -52,7 +52,7 @@ public interface IAssignmentsToMultipleRead {
      * credibilities but no ordered assignments, objects having ordered assignments but no credibilities, and objects
      * having both credibilities and ordered assignments. It is meaningless to compare objects belonging to different
      * classes of capabilities and the equality test between objects which are non homogeneous in that sense return
-     * <code>false</code>. If this object and the compared object both have credibilities, a supplementary condition is
+     * {@code false}. If this object and the compared object both have credibilities, a supplementary condition is
      * added for the objects to be equal, namely that the assignments must be associated with the same credibilities to
      * the same categories. If this object and the compared object both are ordered, the added condition is that the set
      * of categories contained in the objects must have the same order. Both supplementary conditions are required if
@@ -60,8 +60,8 @@ public interface IAssignmentsToMultipleRead {
      * </p>
      * 
      * @param obj
-     *            may be <code>null</code>.
-     * @return <code>true</code> iff both objects are considered equal.
+     *            may be {@code null}.
+     * @return {@code true} iff both objects are considered equal.
      */
     @Override
     public boolean equals(Object obj);
@@ -76,9 +76,9 @@ public interface IAssignmentsToMultipleRead {
      * </p>
      * 
      * @param category
-     *            not <code>null</code>.
+     *            not {@code null}.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Set<Alternative> getAlternatives(Category category);
 
@@ -86,8 +86,8 @@ public interface IAssignmentsToMultipleRead {
      * Retrieves the categories to which an alternative is assigned.
      * 
      * @param alternative
-     *            not <code>null</code>.
-     * @return a read-only copy of the set of categories to which this alternative is assigned, or <code>null</code> iff
+     *            not {@code null}.
+     * @return a read-only copy of the set of categories to which this alternative is assigned, or {@code null} iff
      *         the alternative is not assigned. The returned set is never empty. The returned set is a copy (if the
      *         assignment related to the given alternative later change, this change is not reflected to the object this
      *         method returns).
@@ -106,7 +106,7 @@ public interface IAssignmentsToMultipleRead {
      * reflected to the object this method returns.
      * </p>
      * 
-     * @return a set, not <code>null</code>, empty iff no alternatives are assigned.
+     * @return a set, not {@code null}, empty iff no alternatives are assigned.
      */
     public Set<Category> getCategories();
 }

@@ -21,7 +21,7 @@ public class OrderedAssignmentsToMultiple implements IOrderedAssignmentsToMultip
      * Copy-constructor by value. No reference is kept to the given object.
      * 
      * @param source
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public OrderedAssignmentsToMultiple(IOrderedAssignmentsToMultipleRead source) {
 	this(new VersatileOrderedAssignments(source));

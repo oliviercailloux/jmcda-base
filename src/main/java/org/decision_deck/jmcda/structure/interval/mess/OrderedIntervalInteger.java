@@ -17,7 +17,7 @@ public class OrderedIntervalInteger {
 
     /**
      * @param delegate
-     *            not <code>null</code>, must have a step size.
+     *            not {@code null}, must have a step size.
      */
     public OrderedIntervalInteger(Interval delegate) {
 	Preconditions.checkNotNull(delegate);

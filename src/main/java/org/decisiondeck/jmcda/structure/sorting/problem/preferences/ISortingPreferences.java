@@ -13,6 +13,7 @@ import org.decisiondeck.jmcda.structure.sorting.problem.data.ISortingData;
  * </p>
  * <p>
  * This object is consistent iff all the following holds.
+ * </p>
  * <ul>
  * <li>The data is consistent, i.e.:
  * <ul>
@@ -40,7 +41,6 @@ import org.decisiondeck.jmcda.structure.sorting.problem.data.ISortingData;
  * <li>Either all preference thresholds are empty, or the preference thresholds are set on every criteria.</li>
  * <li>Either all indifference thresholds are empty, or the indifference thresholds are set on every criteria.</li>
  * </ul>
- * </p>
  * 
  * @author Olivier Cailloux
  * 
@@ -53,7 +53,7 @@ public interface ISortingPreferences extends ISortingData {
      * Retrieves a read-only view of the winning coalitions. The set of criteria over which the coalitions are defined
      * is a subset of the criteria returned by {@link #getCriteria()}.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Coalitions getCoalitions();
 
@@ -61,14 +61,14 @@ public interface ISortingPreferences extends ISortingData {
      * Retrieves a read-only view of the evaluations of the profiles. The set of criteria on which evaluations are
      * provided is a subset of the set returned by {@link #getCriteria()}.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public EvaluationsRead getProfilesEvaluations();
 
     /**
      * Retrieves a read-only view of the thresholds.
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public Thresholds getThresholds();
 
@@ -78,8 +78,8 @@ public interface ISortingPreferences extends ISortingData {
      * {@link #getCoalitions()}.
      * 
      * @param criterion
-     *            not <code>null</code>.
-     * @return <code>null</code> iff the criterion, is not in the set of criteria returned by {@link #getCriteria()} or
+     *            not {@code null}.
+     * @return {@code null} iff the criterion, is not in the set of criteria returned by {@link #getCriteria()} or
      *         if no weight has been defined on the given criterion. Otherwise, a positive or zero value.
      */
     public Double getWeight(Criterion criterion);
@@ -96,8 +96,8 @@ public interface ISortingPreferences extends ISortingData {
      * 
      * @param coalitions
      *            the information to set. Any criterion having a weight defined and not existing in this object will be
-     *            added to this object. <code>null</code> to remove the coalitions.
-     * @return <code>true</code> iff the call changed the state of this object.
+     *            added to this object. {@code null} to remove the coalitions.
+     * @return {@code true} iff the call changed the state of this object.
      */
     public boolean setCoalitions(Coalitions coalitions);
 
@@ -105,12 +105,12 @@ public interface ISortingPreferences extends ISortingData {
      * Sets, replaces, or removes the evaluation of the given alternative according to the given criterion.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param criterion
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param value
-     *            <code>null</code> to remove a possibly previously associated value.
-     * @return <code>true</code> iff this call changed the data contained in this object.
+     *            {@code null} to remove a possibly previously associated value.
+     * @return {@code true} iff this call changed the data contained in this object.
      */
     // public boolean setProfilesEvaluation(Alternative alternative, Criterion criterion, Double value);
 
@@ -120,8 +120,8 @@ public interface ISortingPreferences extends ISortingData {
      * already existing, to this object.
      * 
      * @param evaluations
-     *            if <code>null</code>, the possibly existing evaluations will be removed.
-     * @return <code>true</code> iff this call changed this object.
+     *            if {@code null}, the possibly existing evaluations will be removed.
+     * @return {@code true} iff this call changed this object.
      */
     public boolean setProfilesEvaluations(EvaluationsRead evaluations);
 

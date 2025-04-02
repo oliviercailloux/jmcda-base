@@ -48,9 +48,9 @@ public interface IOrderedAssignmentsRead extends IAssignmentsRead, IOrderedAssig
      * clearer.
      * 
      * @param alternative
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @return a set containing exactly one element, namely the category to which the given alternative is assigned, or
-     *         <code>null</code> iff the alternative is not assigned. The returned set is immutable (if the assignment
+     *         {@code null} iff the alternative is not assigned. The returned set is immutable (if the assignment
      *         related to the given alternative later change, this change is not reflected to the object this method
      *         returns).
      */

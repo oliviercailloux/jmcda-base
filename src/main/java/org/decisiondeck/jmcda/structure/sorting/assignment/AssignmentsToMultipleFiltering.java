@@ -23,9 +23,9 @@ public class AssignmentsToMultipleFiltering implements IAssignmentsToMultipleRea
 
     /**
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      * @param filterAlternatives
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public AssignmentsToMultipleFiltering(IAssignmentsToMultipleRead delegate, Predicate<Alternative> filterAlternatives) {
 	Preconditions.checkNotNull(delegate);

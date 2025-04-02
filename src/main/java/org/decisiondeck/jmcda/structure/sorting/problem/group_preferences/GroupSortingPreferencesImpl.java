@@ -92,7 +92,7 @@ public class GroupSortingPreferencesImpl extends GroupSortingDataForwarder imple
      * delegate should <em>not</em> be kept.
      * 
      * @param delegate
-     *            not <code>null</code>.
+     *            not {@code null}.
      */
     public GroupSortingPreferencesImpl(IGroupSortingData delegate) {
 	super(delegate);

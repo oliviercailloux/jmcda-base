@@ -45,12 +45,12 @@ public interface ISortingAssignmentsWithCredibilities extends ISortingData {
      * superset of the assigned alternatives.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     public IOrderedAssignmentsWithCredibilities getAssignments();
 
     /**
-     * @return <code>true</code> iff all alternatives contained in this object are assigned.
+     * @return {@code true} iff all alternatives contained in this object are assigned.
      */
     public boolean hasCompleteAssignments();
 
@@ -70,7 +70,7 @@ public interface ISortingAssignmentsWithCredibilities extends ISortingData {
      * subset of the categories defined in this object.
      * </p>
      * 
-     * @return not <code>null</code>.
+     * @return not {@code null}.
      */
     @Override
     public CatsAndProfs getCatsAndProfs();
